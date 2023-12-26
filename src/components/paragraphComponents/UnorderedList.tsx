@@ -3,5 +3,9 @@ interface UlProps {
 }
 
 export default function Ul({ children }: UlProps) {
-  return <ul style={{ paddingLeft: "2vw" }}>{children}</ul>;
+  return (
+    <ul style={{ paddingLeft: "2vw", fontSize: "1.02rem", lineHeight: "2rem" }}>
+      {children}
+    </ul>
+  );
 }
