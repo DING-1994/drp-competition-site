@@ -6,6 +6,9 @@ import {
   IconButton,
   InputAdornment,
   LinearProgress,
+  RadioGroup,
+  FormControlLabel,
+  Radio,
 } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import {
@@ -85,6 +88,7 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
   return (
     <>
       {formInfoState.formSentLoading && <LinearProgress />}
+      {/* username */}
       <form onSubmit={handleSubmit}>
         <TextField
           autoFocus
@@ -101,6 +105,7 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
             }))
           }
         />
+        {/* email */}
         <TextField
           margin="dense"
           id="email"
@@ -115,6 +120,7 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
             }))
           }
         />
+        {/* password */}
         <TextField
           margin="dense"
           id="password"
@@ -141,6 +147,22 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
             ),
           }}
         />
+        {/* participation choice */}
+        <RadioGroup
+          defaultValue="participate-as-individual"
+          name="participation-choice"
+        >
+          <FormControlLabel
+            value="participate-as-individual"
+            control={<Radio />}
+            label="Participate as an individual"
+          />
+          <FormControlLabel
+            value="participate-as-a-team-member"
+            control={<Radio />}
+            label="Participate as a team member"
+          />
+        </RadioGroup>
         <DialogActions>
           <Button
             onClick={() => formInfoState.setFormOpen(false)}
