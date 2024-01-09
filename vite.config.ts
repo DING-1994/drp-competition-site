@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     outDir: "./dist",
   },
-  base: "/drp-competition-site/",
+  // base: "/drp-competition-site/",
   plugins: [react()],
   // node_modeules 内の KaTeX フォントを読み込むための設定
   server: {
