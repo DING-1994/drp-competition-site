@@ -8,10 +8,6 @@ import overviewImgUrl from "../assets/images/overview.png";
 import environmentExampleUrl from "../assets/images/environment_example.png";
 
 export default function Overview({ index, value }: PageProps) {
-  // const GOOGLE_SPREADSHEET_API_KEY = import.meta.env
-  //   .VITE_GOOGLE_SPREADSHEET_API_KEY;
-  // const GOOGLE_SPREADSHEET_ID = import.meta.env.VITE_SPREADSHEET_ID;
-
   return (
     <Content index={index} value={value}>
       <Heading>Overview</Heading>
