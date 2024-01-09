@@ -26,6 +26,18 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         others.
       </Paragraph>
       <Paragraph>
+        In this competition, we have designed an environment that simulates
+        real-world drone delivery conditions, and participants navigate this
+        environment to complete the task. The environment is a simple grid space
+        consisting of nodes and edges, with distances assigned to the edges.
+        Agents move across the map based on specific policies and are
+        constrained to exist only on nodes and edges. Each agent has unique
+        nodes as their destination and departure points. The agent can ascertain
+        the positions of other agents only when they appear on an adjacent node.
+        Furthermore, once an agent enters an edge, it maintains its direction
+        until it reaches a node.
+      </Paragraph>
+      <Paragraph>
         Agents are allowed to move until they either collide with each other or
         until all agents reach their respective goals. In this dynamic
         environment, participants approach problem-solving through an
@@ -46,10 +58,27 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
 
       <Heading>Q&A</Heading>
       <Paragraph>
-        A web page and a GitHub repository are set up to handle participant
-        questions. The content of the Q& A session is made publicly available on
-        the web page to ensure all participants have access to the information
-        unless the question is not related to participants personal information.
+        To support participants and ensure the success of this competition, we
+        plan to accept questions from participants. A webpage and a GitHub
+        repository will be set up to handle participant questions. The content
+        of the Q&A session will be made publicly available on the webpage to
+        ensure all participants have access to the information unless the
+        question is related to personal information.Additionally, there are
+        plans to include instructions on how to use the environment and provide
+        a basic guide on using Stable Baselines.
+      </Paragraph>
+
+      <Heading>Registration and Participation</Heading>
+      <Paragraph>
+        To participate in this competition, the team must complete the following
+        form from the "participate" button on the top.
+      </Paragraph>
+      <Paragraph>
+        You can participate in this Challenge alone or as a team. These is no
+        maximum team member, and the minimum team size is one person.
+        Participants may not collaborate unless those participants entered this
+        Challenge as a team; participants who are members of the same team may
+        collaborate with one another. Teams may not be merged.
       </Paragraph>
 
       <Heading>Date</Heading>
@@ -107,16 +136,16 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         In this competition, we set three maps with different scalability and
         shapes. As for each map, we set a 10 patterns with different starts and
         goals. Therefore, the above three maps with ten patterns would result in
-        30 result data which are used to calculate the average values for goal
-        rate and moving time. The evaluation will firstly be based on the goal
-        rate of all agents. If they reach a same goal rate, the moving time
-        would be the indicator to rank. We set two phases of submission where
-        the pre-submission phase is used to test the which are not relevant to
-        the final evaluation. The scores submitted during the final submission
-        phase will be considered for the final evaluation. During the final
-        submission phase, participants can submit their programs with many
-        times, the highest score from the submission will be used for the final
-        evaluation.
+        30 result data which are used to calculate the average values for{" "}
+        <em>goal rate</em> and <em>moving time</em>. The evaluation will firstly
+        be based on the goal rate of all agents. If they reach a same goal rate,
+        the moving time would be the indicator to rank. We set two phases of
+        submission where the pre-submission phase is used to test the which are
+        not relevant to the final evaluation. The scores submitted during the
+        final submission phase will be considered for the final evaluation.
+        During the final submission phase, participants can submit their
+        programs with many times, the highest score from the submission will be
+        used for the final evaluation.
       </Paragraph>
 
       <Heading>Finalist</Heading>
@@ -144,26 +173,13 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         Furthermore, we will select three teams as finalists based on their
         ability to achieve a higher average goal rate among five maps. In the
         event of a tie in the goal rate, the moving time will serve as the
-        ranking indicator. Considering prize distribution, we contemplate
-        providing the following prize fees to the winners:
-      </Paragraph>
-      <Ul>
-        <li>1st $300</li>
-        <li>2nd $200</li>
-        <li>3rd $100</li>
-      </Ul>
-      <Paragraph>
-        Finalists must return prize acceptance documents within 15 days after
-        the finalist announcement day (please see above). Failure to do so will
-        result in the prizes not being awarded. By accepting a prize, you agree
-        that the organizers and their agencies may use your name and/or likeness
-        for advertising and promotional purposes without additional
-        compensation, unless prohibited by law.
+        ranking indicator. We will provide certificates to all participants
+        whose programs run successfully.
       </Paragraph>
 
       <Heading>Others</Heading>
       <Paragraph>
-        While participants are allowed to modify the functions within the
+        ​While participants are allowed to modify the functions within the
         environment, they are not permitted to alter the fundamental behavior of
         the agents. For example, changing the definition of collisions or
         expanding the range of agent movement beyond nodes and edges would not
