@@ -4,6 +4,9 @@ import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    outDir: "./dist",
+  },
   plugins: [react()],
   // node_modeules 内の KaTeX フォントを読み込むための設定
   server: {
