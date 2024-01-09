@@ -23,7 +23,7 @@ export default function HeadingWithLink({
         fontWeight: "bold",
         position: "relative",
         display: "inline-block",
-        scrollMarginTop: "80px",
+        scrollMarginTop: "calc(5vh + 2em)",
       }}
     >
       {hovered && (
