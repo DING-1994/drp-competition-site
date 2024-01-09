@@ -46,14 +46,14 @@ export default function App() {
 
   const [tabValue, setTabValue] =
     React.useState<TAB_VALUES_TYPE>(initialTabValue);
-  const [darkMode, setDarkMode] = React.useState(
+  const [darkMode, _] = React.useState(
     localStorage.getItem("darkMode") === "on" ? true : false
   );
 
-  const toggleDarkMode = () => {
-    localStorage.setItem("darkMode", darkMode ? "off" : "on");
-    setDarkMode(!darkMode);
-  };
+  // const toggleDarkMode = () => {
+  //   localStorage.setItem("darkMode", darkMode ? "off" : "on");
+  //   setDarkMode(!darkMode);
+  // };
 
   const theme = createTheme(appTheme(darkMode));
 
