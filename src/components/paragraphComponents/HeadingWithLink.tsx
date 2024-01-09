@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LinkIcon from "@mui/icons-material/Link";
+import { Typography } from "@mui/material";
 
 interface HeadingWithLinkProps {
   id: string;
@@ -13,11 +14,13 @@ export default function HeadingWithLink({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <h1
+    <Typography
+      variant="h4"
       id={id}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      style={{
+      sx={{
+        fontWeight: "bold",
         position: "relative",
         display: "inline-block",
         scrollMarginTop: "80px",
@@ -37,6 +40,6 @@ export default function HeadingWithLink({
         </a>
       )}
       {children}
-    </h1>
+    </Typography>
   );
 }
