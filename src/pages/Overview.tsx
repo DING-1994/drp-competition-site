@@ -129,7 +129,10 @@ export default function Overview({ index, value }: PageProps) {
           optional.
         </li>
       </Ul>
-      More information about submission are described in this page [submission]
+        <strong>Attention: The times of submission are not limited to the submission
+        period. The latest submission is used to determine the finalist.</strong> More information about submission are described in this page [submission].
+      <Heading>Other rules and guidelines</Heading>
+      <Paragraph>Please see this page [rulesandguidelines].</Paragraph>
     </Content>
   );
 }
