@@ -16,9 +16,11 @@
     "@mui/icons-material": "^5.15.0",
     "@mui/material": "^5.15.0",
     "@mui/system": "^5.15.0",
+    "@types/react-katex": "^3.0.4",
     "firebase": "^10.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-katex": "^3.0.1",
     "react-router-dom": "^6.20.1",
     "sass": "^1.69.5",
     "styled-components": "^6.1.1"
