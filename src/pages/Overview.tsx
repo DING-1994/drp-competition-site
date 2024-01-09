@@ -71,7 +71,8 @@ export default function Overview({ index, value }: PageProps) {
         we try to learn agents, we need to install both of them. SB 3 can
         customize policy networks, and save and load policy. Also, By using
         Wandb, we can take more detailed logs of agents' movements. Please see
-        Installation page if you want to get further information.
+        Installation page[Introduction/installation] if you want to get further
+        information.
       </Paragraph>
       <Heading>Important Date</Heading>
       <Ul>
@@ -97,8 +98,8 @@ export default function Overview({ index, value }: PageProps) {
         where <InlineMath>goal\_rate</InlineMath> is the goal rate, calculated
         as the ratio of the number of agents that have reached their goals to
         the total number of agents. (The definition of "goal" and "collusion"
-        are described in [this
-        page](Introduction.md#6-definition-of-each-action-and-processing-of-corresponding-rewards).
+        are described in this page
+        [Introduction/definition-of-each-action-and-processing-of-corresponding-rewards].
         )<InlineMath>{"Dist_{low}"}</InlineMath> represents the summation of the
         shortest path distances for all agents, which serves as a lower bound of
         the optimal solution. <InlineMath>{"Dist_{real}"}</InlineMath> is the
@@ -106,13 +107,12 @@ export default function Overview({ index, value }: PageProps) {
         of trail times in which all agents can reach their destination nodes
         without collision.
       </Paragraph>
-
       <Heading>Submission</Heading>
       <Paragraph>
-        Please go this page and submit your work. There are two submission
-        phases, with the pre-submission phase for testing purposes and the final
-        submission phase for evaluation.(Please see this page to know about more
-        detailed criteria and finalist.)
+        Please go this page [submission] and submit your work. There are two
+        submission phases, with the pre-submission phase for testing purposes
+        and the final submission phase for evaluation.(Please see this page
+        [rulesandguidelines] to know about more detailed criteria and finalist.)
       </Paragraph>
       <Paragraph>
         Participants need to submit these four things through Google form during
@@ -129,6 +129,7 @@ export default function Overview({ index, value }: PageProps) {
           optional.
         </li>
       </Ul>
+      More information about submission are described in this page [submission]
     </Content>
   );
 }
