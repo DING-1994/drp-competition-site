@@ -1,4 +1,4 @@
-import { Heading } from "../components/paragraphComponents/Heading";
+import HeadingWithLink from "../components/paragraphComponents/HeadingWithLink";
 import { Paragraph } from "../components/paragraphComponents/Paragraph";
 import { PageProps } from "./props/PageProps";
 import Content from "../components/body/Content";
@@ -7,7 +7,9 @@ import Ul from "../components/paragraphComponents/UnorderedList";
 export default function RulesAndGuidelines({ index, value }: PageProps) {
   return (
     <Content index={index} value={value}>
-      <Heading>Challenge Description</Heading>
+      <HeadingWithLink id="challenge-description">
+        Challenge Description
+      </HeadingWithLink>
       <Paragraph>
         Welcome to the AAMAS 2024 Drone Delivery Routing Problems Competition.
         These are the Rules and Guidelines of this competition.This is organized
@@ -44,7 +46,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         interdisciplinary methodology.
       </Paragraph>
 
-      <Heading>Code fairness</Heading>
+      <HeadingWithLink id="code-fairness">Code fairness</HeadingWithLink>
       <Paragraph>
         In terms of code fairness, sharing information among teams is strictly
         restricted. It is forbidden to use the code of other teams and vice
@@ -56,7 +58,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         transportation methods but also to the overall transportation problem.
       </Paragraph>
 
-      <Heading>Q&A</Heading>
+      <HeadingWithLink id="q-and-a">Q&A</HeadingWithLink>
       <Paragraph>
         To support participants and ensure the success of this competition, we
         plan to accept questions from participants. A webpage and a GitHub
@@ -68,7 +70,9 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         a basic guide on using Stable Baselines.
       </Paragraph>
 
-      <Heading>Registration and Participation</Heading>
+      <HeadingWithLink id="registration-and-participation">
+        Registration and Participation
+      </HeadingWithLink>
       <Paragraph>
         To participate in this competition, the team must complete the following
         form from the "participate" button on the top.
@@ -81,7 +85,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         collaborate with one another. Teams may not be merged.
       </Paragraph>
 
-      <Heading>Date</Heading>
+      <HeadingWithLink id="date">Date</HeadingWithLink>
       <Paragraph>The following schedule are being devised.</Paragraph>
       <Ul>
         <li>Open homepage and start registration:2024.03.15 10:30 UTC+9</li>
@@ -100,7 +104,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         monitor the website for updates on any changes to the deadlines.
       </Paragraph>
 
-      <Heading>Submission</Heading>
+      <HeadingWithLink id="submission">Submission</HeadingWithLink>
       <Paragraph>
         Conditioned upon compliance with these rules, the Organizers will award
         Prizes to the participants with the highest scores ,which is evaluated
@@ -131,7 +135,9 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         fraud or, late.
       </Paragraph>
 
-      <Heading>The Competition Evaluation Criteria</Heading>
+      <HeadingWithLink id="competition-evaluation-criteria">
+        Competition Evaluation Criteria
+      </HeadingWithLink>
       <Paragraph>
         In this competition, we set three maps with different scalability and
         shapes. As for each map, we set a 10 patterns with different starts and
@@ -148,7 +154,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         used for the final evaluation.
       </Paragraph>
 
-      <Heading>Finalist</Heading>
+      <HeadingWithLink id="finalist">Finalist</HeadingWithLink>
       <Paragraph>
         Each submission undergoes scoring and ranking based on the evaluation
         metrics specified on the website. The top three teams are then selected
@@ -177,9 +183,9 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         whose programs run successfully.
       </Paragraph>
 
-      <Heading>Others</Heading>
+      <HeadingWithLink id="others">Others</HeadingWithLink>
       <Paragraph>
-        ​While participants are allowed to modify the functions within the
+        While participants are allowed to modify the functions within the
         environment, they are not permitted to alter the fundamental behavior of
         the agents. For example, changing the definition of collisions or
         expanding the range of agent movement beyond nodes and edges would not
