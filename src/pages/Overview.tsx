@@ -115,8 +115,8 @@ export default function Overview({ index, value }: PageProps) {
         Please go this page [submission] and submit your work. There are two
         submission phases, with the pre-submission phase for testing purposes
         and the final submission phase for evaluation.(Please see{" "}
-        <Link to="/rules-and-guidelines">this page</Link>
-        [rulesandguidelines] to know about more detailed criteria and finalist.)
+        <Link to="/rules-and-guidelines">Rules and Guidelines</Link> to know
+        about more detailed criteria and finalist.)
       </Paragraph>
       <Paragraph>
         Participants need to submit these four things through Google form during
