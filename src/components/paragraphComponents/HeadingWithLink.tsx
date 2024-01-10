@@ -15,11 +15,13 @@ export default function HeadingWithLink({
 
   return (
     <Typography
-      variant="h4"
+      variant="h5"
       id={id}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       sx={{
+        paddingTop: "1.5rem",
+        paddingBottom: "0.5rem",
         fontWeight: "bold",
         position: "relative",
         display: "inline-block",
@@ -36,7 +38,7 @@ export default function HeadingWithLink({
             transform: "translateX(-100%)",
           }}
         >
-          <LinkIcon />
+          <LinkIcon fontSize="small" />
         </a>
       )}
       {children}
