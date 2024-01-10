@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import { Heading } from "../components/paragraphComponents/Heading";
+import HeadingWithLink from "../components/paragraphComponents/HeadingWithLink";
 import { Paragraph } from "../components/paragraphComponents/Paragraph";
 import { PageProps } from "./props/PageProps";
 import Ul from "../components/paragraphComponents/UnorderedList";
@@ -8,12 +8,14 @@ import overviewImgUrl from "../assets/images/overview.png";
 import environmentExampleUrl from "../assets/images/environment_example.png";
 
 import { BlockMath, InlineMath } from "react-katex";
-import 'katex/dist/katex.min.css';
+import "katex/dist/katex.min.css";
 
 export default function Overview({ index, value }: PageProps) {
   return (
     <Content index={index} value={value}>
-      <Heading>What is this competition?</Heading>
+      <HeadingWithLink id="what-is-this-competition">
+        What is this competition?
+      </HeadingWithLink>
       <Paragraph>
         The Drone Routing Problems Challenge (DRP challenge) presents
         participants with a simulated environment to explore the application of
@@ -22,7 +24,7 @@ export default function Overview({ index, value }: PageProps) {
         tasked with developing an agent capable of achieving swift and
         collision-free navigation to designated destinations.
       </Paragraph>
-      <Heading>Overview</Heading>
+      <HeadingWithLink id="overview">Overview</HeadingWithLink>
       <Paragraph>
         This challenge tackles a key problem in the real world: How to transport
         goods as fast as possible on a dense transportation network without
@@ -43,13 +45,13 @@ export default function Overview({ index, value }: PageProps) {
       <Grid container alignItems="center" justifyContent="center" padding={5}>
         <img src={overviewImgUrl} style={{ width: "50vw" }} alt="Overview" />
       </Grid>
-      <Heading>Registration</Heading>
+      <HeadingWithLink id="registration">Registration</HeadingWithLink>
       <Paragraph>
         If you have even the slightest interest, let's participate in this
         competition! To join, click "participate" on the top right corner of the
         page.
       </Paragraph>
-      <Heading>Environment</Heading>
+      <HeadingWithLink id="environment">Environment</HeadingWithLink>
       <Paragraph>
         The Aerial Delivery Robots environment is This simple-grid space
         environment consists of nodes and edges, and edges have some distances.
@@ -65,7 +67,7 @@ export default function Overview({ index, value }: PageProps) {
           alt="Overview"
         />
       </Grid>
-      <Heading>Requirement</Heading>
+      <HeadingWithLink id="requirement">Requirement</HeadingWithLink>
       <Paragraph>
         We can learn agents by using Stable-baseline 3 (SB3) and gymnasium. When
         we try to learn agents, we need to install both of them. SB 3 can
@@ -74,7 +76,7 @@ export default function Overview({ index, value }: PageProps) {
         Installation page[Introduction/installation] if you want to get further
         information.
       </Paragraph>
-      <Heading>Important Date</Heading>
+      <HeadingWithLink id="important-date">Important Date</HeadingWithLink>
       <Ul>
         <li>Open homepage and start registration:2024.01.29 10:30 UTC+9</li>
         <li>Submission period:2024.01.29 - 2024.04.15</li>
@@ -82,7 +84,7 @@ export default function Overview({ index, value }: PageProps) {
         <li>Finalist Announcement:2024.04.20 10:30 UTC+9</li>
         <li>Winner Announcement:2024.04.25 10:30 UTC+9</li>
       </Ul>
-      <Heading>Task</Heading>
+      <HeadingWithLink id="task">Task</HeadingWithLink>
       <Paragraph>
         In this competition, <strong>three maps</strong> with different
         scalability and shapes are provided, each consisting of{" "}
@@ -107,7 +109,7 @@ export default function Overview({ index, value }: PageProps) {
         of trail times in which all agents can reach their destination nodes
         without collision.
       </Paragraph>
-      <Heading>Submission</Heading>
+      <HeadingWithLink id="submission">Submission</HeadingWithLink>
       <Paragraph>
         Please go this page [submission] and submit your work. There are two
         submission phases, with the pre-submission phase for testing purposes
@@ -129,9 +131,14 @@ export default function Overview({ index, value }: PageProps) {
           optional.
         </li>
       </Ul>
-        <strong>Attention: The times of submission are not limited to the submission
-        period. The latest submission is used to determine the finalist.</strong> More information about submission are described in this page [submission].
-      <Heading>Other rules and guidelines</Heading>
+      <strong>
+        Attention: The times of submission are not limited to the submission
+        period. The latest submission is used to determine the finalist.
+      </strong>{" "}
+      More information about submission are described in this page [submission].
+      <HeadingWithLink id="other-rules-and-guidelines">
+        Other rules and guidelines
+      </HeadingWithLink>
       <Paragraph>Please see this page [rulesandguidelines].</Paragraph>
     </Content>
   );
