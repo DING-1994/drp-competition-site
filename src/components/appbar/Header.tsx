@@ -52,7 +52,11 @@ export default function Header({
           },
         }}
       >
-        <HeaderTabs tabValue={tabValue} handleTabChange={handleTabChange} />
+        <HeaderTabs
+          tabValue={tabValue}
+          setTabValue={setTabValue}
+          handleTabChange={handleTabChange}
+        />
         <Box sx={{ flexGrow: 1 }} />
         <Button
           variant="contained"
