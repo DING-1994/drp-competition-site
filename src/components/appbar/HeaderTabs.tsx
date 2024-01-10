@@ -1,9 +1,11 @@
-import { TAB_VALUES_TYPE } from "../../App";
+import { TAB_VALUES, TAB_VALUES_TYPE } from "../../App";
 import { Tab, Tabs } from "@mui/material";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 interface HeaderTabsProps {
   tabValue: TAB_VALUES_TYPE;
+  setTabValue: React.Dispatch<React.SetStateAction<TAB_VALUES_TYPE>>;
   handleTabChange: (
     event: React.SyntheticEvent,
     newValue: TAB_VALUES_TYPE
@@ -12,11 +14,32 @@ interface HeaderTabsProps {
 
 export default function HeaderTabs({
   tabValue,
+  setTabValue,
   handleTabChange,
 }: HeaderTabsProps) {
+  const location = useLocation();
+  const currentTabValue = (() => {
+    switch (location.pathname) {
+      case "/overview":
+        return TAB_VALUES.Overview;
+      case "/rules-and-guidelines":
+        return TAB_VALUES.Rules;
+      case "/leaderboard":
+        return TAB_VALUES.Leaderboard;
+      case "/submissions":
+        return TAB_VALUES.Submissions;
+      default:
+        return TAB_VALUES.Overview;
+    }
+  })();
+
+  React.useEffect(() => {
+    setTabValue(currentTabValue);
+  }, [location]);
+
   return (
     <Tabs
-      value={tabValue}
+      value={currentTabValue}
       onChange={handleTabChange}
       sx={{ alignSelf: "stretch", paddingTop: "5vh" }}
     >
