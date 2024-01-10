@@ -133,11 +133,14 @@ export default function Overview({ index, value }: PageProps) {
           optional.
         </li>
       </Ul>
-      <strong>
-        Attention: The times of submission are not limited to the submission
-        period. The latest submission is used to determine the finalist.
-      </strong>{" "}
-      More information about submission are described in this page [submission].
+      <Paragraph>
+        <strong>
+          Attention: The times of submission are not limited to the submission
+          period. The latest submission is used to determine the finalist.
+        </strong>{" "}
+        More information about submission are described in this page
+        [submission].
+      </Paragraph>
       <HeadingWithLink id="other-rules-and-guidelines">
         Other rules and guidelines
       </HeadingWithLink>
