@@ -112,9 +112,10 @@ export default function Overview({ index, value }: PageProps) {
       </Paragraph>
       <HeadingWithLink id="submission">Submission</HeadingWithLink>
       <Paragraph>
-        Please go this page [submission] and submit your work. There are two
-        submission phases, with the pre-submission phase for testing purposes
-        and the final submission phase for evaluation.(Please see{" "}
+        Please go to <Link to="/submission">Submission</Link> page and submit
+        your work. There are two submission phases, with the pre-submission
+        phase for testing purposes and the final submission phase for
+        evaluation.(Please see{" "}
         <Link to="/rules-and-guidelines">Rules and Guidelines</Link> to know
         about more detailed criteria and finalist.)
       </Paragraph>
@@ -138,13 +139,16 @@ export default function Overview({ index, value }: PageProps) {
           Attention: The times of submission are not limited to the submission
           period. The latest submission is used to determine the finalist.
         </strong>{" "}
-        More information about submission are described in this page
-        [submission].
+        More information about submission are described in{" "}
+        <Link to="/submission">Submission</Link> page.
       </Paragraph>
       <HeadingWithLink id="other-rules-and-guidelines">
         Other rules and guidelines
       </HeadingWithLink>
-      <Paragraph>Please see this page [rulesandguidelines].</Paragraph>
+      <Paragraph>
+        Please see <Link to="/rules-and-guidelines">Rules and Guideline</Link>{" "}
+        page.
+      </Paragraph>
     </Content>
   );
 }
