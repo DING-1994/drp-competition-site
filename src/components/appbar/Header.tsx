@@ -17,7 +17,6 @@ import { UserInfo } from "../../hooks/useUserInfo";
 import { FormInfo } from "../../hooks/useFormInfo";
 
 interface HeaderProps {
-  tabValue: TAB_VALUES_TYPE;
   setTabValue: React.Dispatch<React.SetStateAction<TAB_VALUES_TYPE>>;
   signUpFormInfoState: FormInfo;
   signInFormInfoState: FormInfo;
@@ -25,16 +24,11 @@ interface HeaderProps {
 }
 
 export default function Header({
-  tabValue,
   setTabValue,
   signUpFormInfoState,
   signInFormInfoState,
   userInfoState,
 }: HeaderProps) {
-  const handleTabChange = (_: React.SyntheticEvent, newValue: number) => {
-    setTabValue(newValue as TAB_VALUES_TYPE);
-  };
-
   return (
     <AppBar position="sticky" sx={{ backgroundColor: "white", padding: 0 }}>
       <Toolbar
@@ -52,11 +46,7 @@ export default function Header({
           },
         }}
       >
-        <HeaderTabs
-          tabValue={tabValue}
-          setTabValue={setTabValue}
-          handleTabChange={handleTabChange}
-        />
+        <HeaderTabs setTabValue={setTabValue} />
         <Box sx={{ flexGrow: 1 }} />
         <Button
           variant="contained"

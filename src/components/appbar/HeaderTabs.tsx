@@ -4,19 +4,10 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 interface HeaderTabsProps {
-  tabValue: TAB_VALUES_TYPE;
   setTabValue: React.Dispatch<React.SetStateAction<TAB_VALUES_TYPE>>;
-  handleTabChange: (
-    event: React.SyntheticEvent,
-    newValue: TAB_VALUES_TYPE
-  ) => void;
 }
 
-export default function HeaderTabs({
-  tabValue,
-  setTabValue,
-  handleTabChange,
-}: HeaderTabsProps) {
+export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
   const location = useLocation();
   const currentTabValue = (() => {
     switch (location.pathname) {
@@ -32,6 +23,13 @@ export default function HeaderTabs({
         return TAB_VALUES.Overview;
     }
   })();
+
+  const handleTabChange = (
+    _: React.SyntheticEvent,
+    newValue: TAB_VALUES_TYPE
+  ) => {
+    setTabValue(newValue);
+  };
 
   React.useEffect(() => {
     setTabValue(currentTabValue);

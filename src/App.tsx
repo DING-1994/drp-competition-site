@@ -23,20 +23,30 @@ export const TAB_VALUES = {
 export type TAB_VALUES_TYPE = (typeof TAB_VALUES)[keyof typeof TAB_VALUES];
 
 export default function App() {
-  const initialTabValue = (() => {
+  const [tabValue, setTabValue] = React.useState<TAB_VALUES_TYPE>(
+    TAB_VALUES.Overview
+  );
+
+  React.useEffect(() => {
+    let newValue;
     switch (location.pathname) {
       case "/overview":
-        return TAB_VALUES.Overview;
+        newValue = TAB_VALUES.Overview;
+        break;
       case "/rules-and-guidelines":
-        return TAB_VALUES.Rules;
+        newValue = TAB_VALUES.Rules;
+        break;
       case "/leaderboard":
-        return TAB_VALUES.Leaderboard;
+        newValue = TAB_VALUES.Leaderboard;
+        break;
       case "/submissions":
-        return TAB_VALUES.Submissions;
+        newValue = TAB_VALUES.Submissions;
+        break;
       default:
-        return TAB_VALUES.Overview;
+        newValue = TAB_VALUES.Overview;
     }
-  })();
+    setTabValue(newValue);
+  }, [location]);
 
   // ユーザー情報を管理するためのカスタムフック
   const userInfoState = useUserInfo();
@@ -44,8 +54,6 @@ export default function App() {
   const signUpFormInfoState = useFormInfo();
   const signInFormInfoState = useFormInfo();
 
-  const [tabValue, setTabValue] =
-    React.useState<TAB_VALUES_TYPE>(initialTabValue);
   const [darkMode, _] = React.useState(
     localStorage.getItem("darkMode") === "on" ? true : false
   );
@@ -62,7 +70,6 @@ export default function App() {
       <CssBaseline />
       <BrowserRouter>
         <Header
-          tabValue={tabValue}
           setTabValue={setTabValue}
           signInFormInfoState={signInFormInfoState}
           signUpFormInfoState={signUpFormInfoState}

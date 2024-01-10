@@ -9,6 +9,7 @@ import environmentExampleUrl from "../assets/images/environment_example.png";
 
 import { BlockMath, InlineMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import { Link } from "react-router-dom";
 
 export default function Overview({ index, value }: PageProps) {
   return (
@@ -113,7 +114,8 @@ export default function Overview({ index, value }: PageProps) {
       <Paragraph>
         Please go this page [submission] and submit your work. There are two
         submission phases, with the pre-submission phase for testing purposes
-        and the final submission phase for evaluation.(Please see this page
+        and the final submission phase for evaluation.(Please see{" "}
+        <Link to="/rules-and-guidelines">this page</Link>
         [rulesandguidelines] to know about more detailed criteria and finalist.)
       </Paragraph>
       <Paragraph>
