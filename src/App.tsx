@@ -1,7 +1,7 @@
 import * as React from "react";
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/appbar/Header";
 import SuccessSnackbar from "./components/snackbar/SuccessSnackbar";
 import AlertDialog from "./components/alert/AlertDialog";
@@ -68,7 +68,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter>
+      <HashRouter>
         <Header
           setTabValue={setTabValue}
           signInFormInfoState={signInFormInfoState}
@@ -117,7 +117,7 @@ export default function App() {
             }
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }
