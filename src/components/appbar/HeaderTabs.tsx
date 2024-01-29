@@ -10,7 +10,8 @@ interface HeaderTabsProps {
 export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
   const location = useLocation();
   const currentTabValue = (() => {
-    switch (location.pathname) {
+    const path = location.pathname.replace("#", "");
+    switch (path) {
       case "/overview":
         return TAB_VALUES.Overview;
       case "/rules-and-guidelines":
@@ -33,6 +34,7 @@ export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
 
   React.useEffect(() => {
     setTabValue(currentTabValue);
+    console.log("currentTabValue: ", currentTabValue);
   }, [location]);
 
   return (
