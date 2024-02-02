@@ -6,6 +6,7 @@ import Ul from "../components/paragraphComponents/UnorderedList";
 import Content from "../components/body/Content";
 import overviewImgUrl from "../assets/images/overview.png";
 import environmentExampleUrl from "../assets/images/environment_example.png";
+import aerialDeliveryRobot from "../assets/images/aerial_delivery_robot.png";
 
 import { BlockMath, InlineMath } from "react-katex";
 import "katex/dist/katex.min.css";
@@ -26,6 +27,9 @@ export default function Overview({ index, value }: PageProps) {
         collision-free navigation to designated destinations.
       </Paragraph>
       <HeadingWithLink id="overview">Overview</HeadingWithLink>
+      <Grid container alignItems="center" justifyContent="center" padding={5}>
+        <img src={overviewImgUrl} style={{ width: "50vw" }} alt="Overview" />
+      </Grid>
       <Paragraph>
         This challenge tackles a key problem in the real world: How to transport
         goods as fast as possible on a dense transportation network without
@@ -43,8 +47,18 @@ export default function Overview({ index, value }: PageProps) {
         drones to ensure efficient, timely, and cost-effective delivery of
         goods.
       </Paragraph>
+      <Paragraph>
+      The DRP has applications not only to drones but also to aerial delivery
+      robots, which travel along wires like a cable car as shown in the following figure.
+      Aerial delivery robots have already been demonstrated in urban areas, and DRP is a 
+      realistic and urgent issue that is expected to have industrial applications. 
+      </Paragraph>
       <Grid container alignItems="center" justifyContent="center" padding={5}>
-        <img src={overviewImgUrl} style={{ width: "50vw" }} alt="Overview" />
+        <img
+          src={aerialDeliveryRobot}
+          style={{ width: "25vw" }}
+          alt="Overview"
+        />
       </Grid>
       <HeadingWithLink id="registration">Registration</HeadingWithLink>
       <Paragraph>
@@ -89,8 +103,8 @@ export default function Overview({ index, value }: PageProps) {
       <Paragraph>
         In this competition, <strong>three maps</strong> with different
         scalability and shapes are provided, each consisting of{" "}
-        <strong>ten patterns</strong>
-        with different starting and goal points. This results in a total of{" "}
+        <strong>ten patterns</strong> with different starting and goal points. 
+        This results in a total of{" "}
         <strong>30 data sets</strong>, used to calculate average values for{" "}
         <em>goal rate</em> and
         <em>moving time</em>. We calculate the score as the following equation.
