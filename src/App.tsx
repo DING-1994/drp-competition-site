@@ -9,6 +9,7 @@ import Lp from "./pages/Lp";
 import Overview from "./pages/Overview";
 import RulesAndGuidelines from "./pages/RulesAndGuidelines";
 import Leaderboard from "./pages/Leaderboard";
+import Organization from "./pages/Organization";
 import { appTheme } from "./util/Theme";
 import { useUserInfo } from "./hooks/useUserInfo";
 import { useFormInfo } from "./hooks/useFormInfo";
@@ -16,8 +17,9 @@ import { useFormInfo } from "./hooks/useFormInfo";
 export const TAB_VALUES = {
   Overview: 0,
   Rules: 1,
-  Leaderboard: 2,
-  Submissions: 3,
+  Organization:2,
+  Leaderboard: 3,
+  Submissions: 4,
 } as const;
 
 export type TAB_VALUES_TYPE = (typeof TAB_VALUES)[keyof typeof TAB_VALUES];
@@ -43,6 +45,9 @@ export default function App() {
         break;
       case "submissions":
         newValue = TAB_VALUES.Submissions;
+        break;
+      case "organization":
+        newValue = TAB_VALUES.Organization;
         break;
       default:
         newValue = TAB_VALUES.Overview;
@@ -116,6 +121,12 @@ export default function App() {
             path="/leaderboard"
             element={
               <Leaderboard index={TAB_VALUES.Leaderboard} value={tabValue} />
+            }
+          />
+          <Route
+            path="/organization"
+            element={
+              <Organization index={TAB_VALUES.Organization} value={tabValue} />
             }
           />
         </Routes>

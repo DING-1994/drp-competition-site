@@ -20,6 +20,8 @@ export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
         return TAB_VALUES.Leaderboard;
       case "/submissions":
         return TAB_VALUES.Submissions;
+      case "/organization":
+        return TAB_VALUES.Organization;
       default:
         return TAB_VALUES.Overview;
     }
@@ -71,6 +73,14 @@ export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
         disableRipple
         sx={{ textTransform: "none", fontWeight: "bold" }}
       /> */}
+      <Tab
+        label="Organization"
+        component={Link}
+        to="/organization"
+        disableRipple
+        sx={{ textTransform: "none", fontWeight: "bold" }}
+      />
+
     </Tabs>
   );
 }
