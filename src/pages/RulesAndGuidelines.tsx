@@ -14,7 +14,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
       <Paragraph>
         Welcome to the AAMAS 2024 Drone Delivery Routing Problems Competition.
         These are the Rules and Guidelines of this competition. This challenge is organized
-        by Shiyao Ding, Hideki Aoyama, Donghui Lin, and Fumito Uwano. GitHub and
+        by Shiyao Ding, Hideki Aoyama, Donghui Lin, and Fumito Uwano. <a href="https://github.com/DrpChallenge/main">GitHub</a> and
         this website provide information about this competition. Please read
         these rules carefully. If you don't agree with (or cannot comply with)
         the rules, you may not participate in this Challenge.
@@ -53,8 +53,8 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
       <HeadingWithLink id="q-and-a">Q&A</HeadingWithLink>
       <Paragraph>
         To support participants and ensure the success of this competition, we
-        plan to accept questions from participants. A GitHub
-        repository will be set up to handle participant questions. The content
+        plan to accept questions from participants. A<a href="https://github.com/DrpChallenge/main"> GitHub
+        repository</a> will be set up to handle participant questions. The content
         of the Q&A session will be made publicly available on the webpage to
         ensure all participants have access to the information unless the
         question is related to personal information. Additionally, there are
@@ -143,8 +143,8 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
           prohibited to reuse code from other teams.
         </li>
         <li>
-          Academic report(optional): Brief instruction of the method, 1-3
-          page(excluding reference), should be written in English.
+          Academic report(optional): Brief instruction of the method, one page(excluding reference),
+          should be written in English.
           Whether to submit the academic report is optional.
           If there is any related information used to derive the
           results, this information must be contained in their academic report.
@@ -169,7 +169,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         </li>
       </Ul>
       <Paragraph>
-        In terms of code fairness, sharing information among teams is strictly
+        Sharing information among teams is strictly
         restricted. It is forbidden to use the code of other teams and vice
         versa. To prevent code plagiarism, participants are prohibited from
         engaging in direct code exchanges with each other. 

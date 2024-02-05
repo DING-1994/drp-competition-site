@@ -60,20 +60,30 @@ export default function Overview({ index, value }: PageProps) {
           alt="Overview"
         />
       </Grid>
+      <HeadingWithLink id="introduction">Introduction</HeadingWithLink>
+      <Paragraph>
+        All material related to this competition are contained in this 
+        <a href="https://github.com/DrpChallenge/main">GitHub repository</a>.
+        For specific instructions about the code, please refer to this page [introduction].
+      </Paragraph>
       <HeadingWithLink id="registration">Registration</HeadingWithLink>
       <Paragraph>
-        If you have even the slightest interest, let's participate in this
-        competition! To join, click "participate" on the top right corner of the
+        If you have even the slightest interest, let's visit <a href="https://github.com/DrpChallenge/main"> GitHub
+        repository</a> and participate in this
+        competition! To join, click "Participate" on the top right corner of the
         page.
       </Paragraph>
+
       <HeadingWithLink id="environment">Environment</HeadingWithLink>
       <Paragraph>
-        The Aerial Delivery Robots environment is This simple-grid space
+        The Aerial Delivery Robots environment is This  non-grid space 
         environment consists of nodes and edges, and edges have some distances.
         The agents move on the map according to some kind of policy, and under
         any circumstances, they cannot exist outside of nodes and edges. Each
         agent has different nodes as their destination and departure state. In
         addition, This environment is described in Python.
+        Please visit <a href="https://github.com/DrpChallenge/main"> GitHub repository</a>
+        to get more information about the environment.
       </Paragraph>
       <Grid container alignItems="center" justifyContent="center" padding={5}>
         <img
@@ -143,9 +153,8 @@ export default function Overview({ index, value }: PageProps) {
           indicate the source of the code.
         </li>
         <li>
-          Academic report(optional): brief instruction of the method, 1-3
-          page(excluding reference). Whether to submit the academic report is
-          optional.
+          Academic report(optional): brief instruction of the method, one page(excluding reference).
+          Whether to submit the academic report is optional.
         </li>
       </Ul>
       <Paragraph>
