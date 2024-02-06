@@ -1,7 +1,7 @@
 import { TAB_VALUES, TAB_VALUES_TYPE } from "../../App";
 import { Tab, Tabs } from "@mui/material";
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 interface HeaderTabsProps {
   setTabValue: React.Dispatch<React.SetStateAction<TAB_VALUES_TYPE>>;
@@ -9,6 +9,8 @@ interface HeaderTabsProps {
 
 export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
   const location = useLocation();
+  const navigate = useNavigate();
+
   const currentTabValue = (() => {
     const path = location.pathname.replace("#", "");
     switch (path) {
@@ -25,17 +27,25 @@ export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
     }
   })();
 
+  React.useEffect(() => {
+    const hash = location.hash.replace("#", "");
+    setTabValue(currentTabValue);
+    // DOM の構築が終わるのを待ってからスクロールする
+    setTimeout(() => {
+      const element = document.getElementById(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+      navigate(`#${hash}`);
+    }, 0);
+  }, []);
+
   const handleTabChange = (
     _: React.SyntheticEvent,
     newValue: TAB_VALUES_TYPE
   ) => {
     setTabValue(newValue);
   };
-
-  React.useEffect(() => {
-    setTabValue(currentTabValue);
-    console.log("currentTabValue: ", currentTabValue);
-  }, [location]);
 
   return (
     <Tabs
