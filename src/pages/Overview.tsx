@@ -19,7 +19,7 @@ export default function Overview({ index, value }: PageProps) {
         What is this competition?
       </HeadingWithLink>
       <Paragraph>
-        The Drone Routing Problems Challenge (DRP challenge) presents
+        The Drone Routing Problems Challenge ( DRP challenge ) presents
         participants with a simulated environment to explore the application of
         reinforcement learning in optimizing drone delivery. Utilizing a virtual
         platform mimicking real-world delivery scenarios, participants are
@@ -94,7 +94,7 @@ export default function Overview({ index, value }: PageProps) {
       </Grid>
       <HeadingWithLink id="requirement">Requirement</HeadingWithLink>
       <Paragraph>
-        We can learn agents by using Stable-baseline 3 (SB3) and gymnasium. When
+        We can learn agents by using Stable-baseline 3 ( SB3 ) and gymnasium. When
         we try to learn agents, we need to install both of them. SB 3 can
         customize policy networks, and save and load policy. Also, By using
         Wandb, we can take more detailed logs of agents' movements. Please see
@@ -139,9 +139,9 @@ export default function Overview({ index, value }: PageProps) {
         Please go to <Link to="/submission">Submission</Link> page and submit
         your work. There are two submission phases, with the pre-submission
         phase for testing purposes and the final submission phase for
-        evaluation.(Please see{" "}
+        evaluation. ( Please see{" "}
         <Link to="/rules-and-guidelines">Rules and Guidelines</Link> to know
-        about more detailed criteria and finalist.)
+        about more detailed criteria and finalist. )
       </Paragraph>
       <Paragraph>
         Participants need to submit these four things through Google form during
@@ -153,7 +153,7 @@ export default function Overview({ index, value }: PageProps) {
           indicate the source of the code.
         </li>
         <li>
-          Academic report(optional): brief instruction of the method, one page(excluding reference).
+          Academic report ( optional ): brief instruction of the method, one page ( excluding reference ).
           Whether to submit the academic report is optional.
         </li>
       </Ul>

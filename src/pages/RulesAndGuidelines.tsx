@@ -16,7 +16,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         These are the Rules and Guidelines of this competition. This challenge is organized
         by Shiyao Ding, Hideki Aoyama, Donghui Lin, and Fumito Uwano. <a href="https://github.com/DrpChallenge/main">GitHub</a> and
         this website provide information about this competition. Please read
-        these rules carefully. If you don't agree with (or cannot comply with)
+        these rules carefully. If you don't agree with ( or cannot comply with )
         the rules, you may not participate in this Challenge.
       </Paragraph>
       <Paragraph>
@@ -34,8 +34,8 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         In this competition, we have designed an environment that simulates
         real-world drone delivery conditions, and participants navigate this
         environment to complete the task. The environment is a non-grid space
-        consisting of nodes and edges, with distances assigned to the edges 
-        , which are created from real-world maps.
+        consisting of nodes and edges, with distances assigned to the edges, 
+        which are created from real-world maps.
         Multiple agents move across the map based on specific policies and are
         constrained to exist only on nodes and edges. Each agent has unique
         nodes as their destination and departure points. The agent can ascertain
@@ -87,7 +87,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         <li>Winner Announcement:2024.04.25 10:30 UTC+9</li>
       </Ul>
       <Paragraph>
-        All times are written in Japan Standard Time (JST). YOU ARE RESPONSIBLE
+        All times are written in Japan Standard Time ( JST ). YOU ARE RESPONSIBLE
         TO IDENTIFY THE RELEVANT TIME ZONE IN YOUR LOCATION. The competition
         will take place from the specified start date and time until the
         designated end date and time as outlined on the website, with the
@@ -131,7 +131,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
       <Paragraph>
         Conditioned upon compliance with these rules, the Organizers will award
         Prizes to the participants with the highest scores, which are evaluated
-        by the competition evaluation criteria(defined below). Participants
+        by the competition evaluation criteria ( defined below ). Participants
         need to submit these four things through Google form during the
         submission period.
       </Paragraph>
@@ -143,7 +143,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
           prohibited to reuse code from other teams.
         </li>
         <li>
-          Academic report(optional): Brief instruction of the method, one page(excluding reference),
+          Academic report ( optional ) : Brief instruction of the method, one page ( excluding reference ) ,
           should be written in English.
           Whether to submit the academic report is optional.
           If there is any related information used to derive the
