@@ -13,6 +13,9 @@ import Overview from "./pages/Overview";
 import RulesAndGuidelines from "./pages/RulesAndGuidelines";
 import Submissions from "./pages/Submissions";
 import { appTheme } from "./util/Theme";
+import authReducer from "./lib/firebase/authReducer";
+import AuthContext from "./contexts/AuthContext";
+import { listenAuthState } from "./lib/firebase/auth";
 
 export const TAB_VALUES = {
   Overview: 0,
@@ -26,6 +29,10 @@ export type TAB_VALUES_TYPE = (typeof TAB_VALUES)[keyof typeof TAB_VALUES];
 export default function App() {
   const [tabValue, setTabValue] = React.useState<TAB_VALUES_TYPE>(
     TAB_VALUES.Overview
+  );
+  const [state, dispatch] = React.useReducer(
+    authReducer.reducer,
+    authReducer.initialState
   );
 
   React.useEffect(() => {
@@ -51,6 +58,10 @@ export default function App() {
     setTabValue(newValue);
   }, [location]);
 
+  React.useEffect(() => {
+    return listenAuthState(dispatch);
+  }, []);
+
   // ユーザー情報を管理するためのカスタムフック
   const userInfoState = useUserInfo();
   // フォーム情報を管理するためのカスタムフック
@@ -69,64 +80,68 @@ export default function App() {
   const theme = createTheme(appTheme(darkMode));
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <HashRouter>
-        <Header
-          setTabValue={setTabValue}
-          signInFormInfoState={signInFormInfoState}
-          signUpFormInfoState={signUpFormInfoState}
-          userInfoState={userInfoState}
-        />
-        <SuccessSnackbar
-          open={signInFormInfoState.formSentSuccess}
-          setFormSentSuccess={signInFormInfoState.setFormSentSuccess}
-          message="Signed in successfully!"
-        />
-        <AlertDialog
-          open={signUpFormInfoState.formSentSuccess}
-          setOpen={signUpFormInfoState.setFormSentSuccess}
-          title="Verify your email"
-          message="In order to complete the registration, please check your email and activate your account from the link in the email."
-        />
-        <AlertDialog
-          open={signInFormInfoState.formSentError}
-          setOpen={signInFormInfoState.setFormSentError}
-          title="Failed to sign in"
-          message={signInFormInfoState.formSentErrorMessage}
-        />
-        <AlertDialog
-          open={signUpFormInfoState.formSentError}
-          setOpen={signUpFormInfoState.setFormSentError}
-          title="Failed to sign up"
-          message={signUpFormInfoState.formSentErrorMessage}
-        />
-        <Routes>
-          <Route path="/" element={<Lp value={tabValue} />} />
-          <Route
-            path="/overview"
-            element={<Overview index={TAB_VALUES.Overview} value={tabValue} />}
+    <AuthContext.Provider value={state}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <HashRouter>
+          <Header
+            setTabValue={setTabValue}
+            signInFormInfoState={signInFormInfoState}
+            signUpFormInfoState={signUpFormInfoState}
+            userInfoState={userInfoState}
           />
-          <Route
-            path="/rules-and-guidelines"
-            element={
-              <RulesAndGuidelines index={TAB_VALUES.Rules} value={tabValue} />
-            }
+          <SuccessSnackbar
+            open={signInFormInfoState.formSentSuccess}
+            setFormSentSuccess={signInFormInfoState.setFormSentSuccess}
+            message="Signed in successfully!"
           />
-          <Route
-            path="/leaderboard"
-            element={
-              <Leaderboard index={TAB_VALUES.Leaderboard} value={tabValue} />
-            }
+          <AlertDialog
+            open={signUpFormInfoState.formSentSuccess}
+            setOpen={signUpFormInfoState.setFormSentSuccess}
+            title="Verify your email"
+            message="In order to complete the registration, please check your email and activate your account from the link in the email."
           />
-          <Route
-            path="/submissions"
-            element={
-              <Submissions index={TAB_VALUES.Submissions} value={tabValue} />
-            }
+          <AlertDialog
+            open={signInFormInfoState.formSentError}
+            setOpen={signInFormInfoState.setFormSentError}
+            title="Failed to sign in"
+            message={signInFormInfoState.formSentErrorMessage}
           />
-        </Routes>
-      </HashRouter>
-    </ThemeProvider>
+          <AlertDialog
+            open={signUpFormInfoState.formSentError}
+            setOpen={signUpFormInfoState.setFormSentError}
+            title="Failed to sign up"
+            message={signUpFormInfoState.formSentErrorMessage}
+          />
+          <Routes>
+            <Route path="/" element={<Lp value={tabValue} />} />
+            <Route
+              path="/overview"
+              element={
+                <Overview index={TAB_VALUES.Overview} value={tabValue} />
+              }
+            />
+            <Route
+              path="/rules-and-guidelines"
+              element={
+                <RulesAndGuidelines index={TAB_VALUES.Rules} value={tabValue} />
+              }
+            />
+            <Route
+              path="/leaderboard"
+              element={
+                <Leaderboard index={TAB_VALUES.Leaderboard} value={tabValue} />
+              }
+            />
+            <Route
+              path="/submissions"
+              element={
+                <Submissions index={TAB_VALUES.Submissions} value={tabValue} />
+              }
+            />
+          </Routes>
+        </HashRouter>
+      </ThemeProvider>
+    </AuthContext.Provider>
   );
 }
