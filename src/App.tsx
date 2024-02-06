@@ -1,17 +1,18 @@
-import * as React from "react";
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import * as React from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
+import AlertDialog from "./components/alert/AlertDialog";
 import Header from "./components/appbar/Header";
 import SuccessSnackbar from "./components/snackbar/SuccessSnackbar";
-import AlertDialog from "./components/alert/AlertDialog";
+import { useFormInfo } from "./hooks/useFormInfo";
+import { useUserInfo } from "./hooks/useUserInfo";
+import Leaderboard from "./pages/Leaderboard";
 import Lp from "./pages/Lp";
 import Overview from "./pages/Overview";
 import RulesAndGuidelines from "./pages/RulesAndGuidelines";
-import Leaderboard from "./pages/Leaderboard";
+import Submissions from "./pages/Submissions";
 import { appTheme } from "./util/Theme";
-import { useUserInfo } from "./hooks/useUserInfo";
-import { useFormInfo } from "./hooks/useFormInfo";
 
 export const TAB_VALUES = {
   Overview: 0,
@@ -116,6 +117,12 @@ export default function App() {
             path="/leaderboard"
             element={
               <Leaderboard index={TAB_VALUES.Leaderboard} value={tabValue} />
+            }
+          />
+          <Route
+            path="/submissions"
+            element={
+              <Submissions index={TAB_VALUES.Submissions} value={tabValue} />
             }
           />
         </Routes>

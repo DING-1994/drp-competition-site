@@ -67,7 +67,7 @@ export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
         disableRipple
         sx={{ textTransform: "none", fontWeight: "bold" }}
       />
-      {/* <Tab
+      <Tab
         label="Leaderboard"
         component={Link}
         to="/leaderboard"
@@ -80,7 +80,7 @@ export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
         to="/submissions"
         disableRipple
         sx={{ textTransform: "none", fontWeight: "bold" }}
-      /> */}
+      />
     </Tabs>
   );
 }
