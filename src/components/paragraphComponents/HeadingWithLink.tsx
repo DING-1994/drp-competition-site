@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import LinkIcon from "@mui/icons-material/Link";
 import { Typography } from "@mui/material";
 
@@ -12,6 +13,16 @@ export default function HeadingWithLink({
   children,
 }: HeadingWithLinkProps) {
   const [hovered, setHovered] = useState(false);
+  const navigate = useNavigate();
+
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    event.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    navigate(`#${id}`);
+  };
 
   return (
     <Typography
@@ -31,6 +42,7 @@ export default function HeadingWithLink({
       {hovered && (
         <a
           href={`#${id}`}
+          onClick={handleClick}
           style={{
             textDecoration: "none",
             position: "absolute",
