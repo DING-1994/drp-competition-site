@@ -30,6 +30,7 @@ export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
   React.useEffect(() => {
     const hash = location.hash.replace("#", "");
     setTabValue(currentTabValue);
+    // DOM の構築が終わるのを待ってからスクロールする
     setTimeout(() => {
       const element = document.getElementById(hash);
       if (element) {
