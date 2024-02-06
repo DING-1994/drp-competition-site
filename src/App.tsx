@@ -30,18 +30,18 @@ export default function App() {
   React.useEffect(() => {
     let newValue;
     const hash = location.hash;
-    const path = hash.startsWith("#/") ? hash.slice(2) : hash;
+    const path = hash.startsWith("#/") ? hash.split("#")[1] : hash;
     switch (path) {
-      case "overview":
+      case "/overview":
         newValue = TAB_VALUES.Overview;
         break;
-      case "rules-and-guidelines":
+      case "/rules-and-guidelines":
         newValue = TAB_VALUES.Rules;
         break;
-      case "leaderboard":
+      case "/leaderboard":
         newValue = TAB_VALUES.Leaderboard;
         break;
-      case "submissions":
+      case "/submissions":
         newValue = TAB_VALUES.Submissions;
         break;
       default:

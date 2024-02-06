@@ -15,7 +15,9 @@ export default function HeadingWithLink({
   const [hovered, setHovered] = useState(false);
   const navigate = useNavigate();
 
-  const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const handleClick = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
     event.preventDefault();
     const element = document.getElementById(id);
     if (element) {
