@@ -1,9 +1,11 @@
 import firebase from "firebase/compat/app";
 import { Dispatch } from "react";
 import { Action } from "./interface";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./firebase";
 
 export function listenAuthState(dispatch: Dispatch<Action>) {
-  return firebase.auth().onAuthStateChanged((user) => {
+  return onAuthStateChanged(auth, (user) => {
     if (user) {
       dispatch({
         type: "login",
