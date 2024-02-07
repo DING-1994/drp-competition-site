@@ -53,10 +53,7 @@ export default function Header({
           variant="contained"
           color="primary"
           sx={{ margin: "1rem", textTransform: "none", fontWeight: "bold" }}
-          onClick={() => signInFormInfoState.setFormOpen(true)}
-          // onClick={() => {
-          //   console.log("Sign in button clicked");
-          // }}
+          // onClick={() => signInFormInfoState.setFormOpen(true)}
         >
           Sign in
         </Button>
@@ -64,7 +61,7 @@ export default function Header({
           variant="contained"
           color="primary"
           sx={{ margin: "1rem", textTransform: "none", fontWeight: "bold" }}
-          onClick={() => logout()}
+          // onClick={() => logout()}
         >
           Sign out
         </Button>
@@ -72,10 +69,7 @@ export default function Header({
           variant="contained"
           color="primary"
           sx={{ margin: "1rem", textTransform: "none", fontWeight: "bold" }}
-          onClick={() => signUpFormInfoState.setFormOpen(true)}
-          // onClick={() => {
-          //   console.log("Participate button clicked");
-          // }}
+          // onClick={() => signUpFormInfoState.setFormOpen(true)}
         >
           Participate
         </Button>
