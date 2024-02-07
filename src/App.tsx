@@ -7,15 +7,13 @@ import Header from "./components/appbar/Header";
 import SuccessSnackbar from "./components/snackbar/SuccessSnackbar";
 import { useFormInfo } from "./hooks/useFormInfo";
 import { useUserInfo } from "./hooks/useUserInfo";
+import { AuthProvider } from "./lib/context/AuthContext";
 import Leaderboard from "./pages/Leaderboard";
 import Lp from "./pages/Lp";
 import Overview from "./pages/Overview";
 import RulesAndGuidelines from "./pages/RulesAndGuidelines";
 import Submissions from "./pages/Submissions";
 import { appTheme } from "./util/Theme";
-import authReducer from "./lib/firebase/authReducer";
-import AuthContext from "./contexts/AuthContext";
-import { listenAuthState } from "./lib/firebase/auth";
 
 export const TAB_VALUES = {
   Overview: 0,
@@ -29,10 +27,6 @@ export type TAB_VALUES_TYPE = (typeof TAB_VALUES)[keyof typeof TAB_VALUES];
 export default function App() {
   const [tabValue, setTabValue] = React.useState<TAB_VALUES_TYPE>(
     TAB_VALUES.Overview
-  );
-  const [state, dispatch] = React.useReducer(
-    authReducer.reducer,
-    authReducer.initialState
   );
 
   React.useEffect(() => {
@@ -58,10 +52,6 @@ export default function App() {
     setTabValue(newValue);
   }, [location]);
 
-  React.useEffect(() => {
-    return listenAuthState(dispatch);
-  }, []);
-
   // ユーザー情報を管理するためのカスタムフック
   const userInfoState = useUserInfo();
   // フォーム情報を管理するためのカスタムフック
@@ -80,7 +70,7 @@ export default function App() {
   const theme = createTheme(appTheme(darkMode));
 
   return (
-    <AuthContext.Provider value={state}>
+    <AuthProvider>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <HashRouter>
@@ -142,6 +132,6 @@ export default function App() {
           </Routes>
         </HashRouter>
       </ThemeProvider>
-    </AuthContext.Provider>
+    </AuthProvider>
   );
 }

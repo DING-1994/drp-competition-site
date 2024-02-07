@@ -1,31 +1,30 @@
-import firebase from "firebase/compat/app";
-import { Dispatch } from "react";
-import { Action } from "./interface";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "./firebase";
+import { User } from "../common/User";
+import { firebaseApp } from "./firebase";
+import {
+  onAuthStateChanged as onFirebaseAuthStateChanged,
+  getAuth,
+  signOut,
+} from "firebase/auth";
 
-export function listenAuthState(dispatch: Dispatch<Action>) {
-  return onAuthStateChanged(auth, (user) => {
-    if (user) {
-      dispatch({
-        type: "login",
-        payload: {
-          user,
-        },
+export function logout(): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const auth = getAuth(firebaseApp);
+    signOut(auth)
+      .then(() => {
+        resolve();
+      })
+      .catch((error) => {
+        reject(error);
       });
-    } else {
-      dispatch({
-        type: "logout",
-      });
-    }
   });
 }
 
-export const logout = () => {
-  return firebase
-    .auth()
-    .signOut()
-    .catch((error) => {
-      console.error(error);
-    });
+export const onAuthStateChanged = (callback: (user: User | null) => void) => {
+  const auth = getAuth(firebaseApp);
+  onFirebaseAuthStateChanged(auth, (user) => {
+    const userInfo: User | null = user
+      ? { displayName: user.displayName, email: user.email }
+      : null;
+    callback(userInfo);
+  });
 };
