@@ -15,7 +15,7 @@ import SignUpForm from "../form/SignUpForm";
 import SignInForm from "../form/SignInForm";
 import { UserInfo } from "../../hooks/useUserInfo";
 import { FormInfo } from "../../hooks/useFormInfo";
-import { logout } from "../../lib/firebase/auth";
+// import { logout } from "../../lib/firebase/auth";
 
 interface HeaderProps {
   setTabValue: React.Dispatch<React.SetStateAction<TAB_VALUES_TYPE>>;
