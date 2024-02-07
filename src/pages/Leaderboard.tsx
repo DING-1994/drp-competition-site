@@ -5,6 +5,7 @@
 import Content from "../components/body/Content";
 import HeadingWithLink from "../components/paragraphComponents/HeadingWithLink";
 import { Paragraph } from "../components/paragraphComponents/Paragraph";
+import { useAuthContext } from "../lib/context/AuthContext";
 // import { Heading } from "../components/paragraphComponents/Heading";
 // import HeadingWithLink from "../components/paragraphComponents/HeadingWithLink";
 // import { db } from "../lib/firebase/firebase";
@@ -24,10 +25,22 @@ import { PageProps } from "./props/PageProps";
 // };
 
 export default function Leaderboard({ index, value }: PageProps) {
+  const { currentUser } = useAuthContext();
   return (
     <Content index={index} value={value}>
       <HeadingWithLink id="leaderboard">Leaderboard</HeadingWithLink>
-      <Paragraph>The leaderboard will be displayed here.</Paragraph>
+      <Paragraph>This is the leaderboard page.</Paragraph>
+      {currentUser ? (
+        <Paragraph>
+          You are signed in as{" "}
+          <strong>
+            {currentUser.displayName} ({currentUser.email})
+          </strong>
+          .
+        </Paragraph>
+      ) : (
+        <Paragraph>You are not signed in.</Paragraph>
+      )}
     </Content>
   );
 }
