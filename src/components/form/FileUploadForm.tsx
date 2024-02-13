@@ -27,7 +27,7 @@ export default function FileUploadForm() {
   const uploadFile = async () => {
     const storageRef = ref(storage, `submissions/${file?.name}`);
     await uploadBytes(storageRef, file as Blob)
-      .then((snapshot) => {
+      .then((_) => {
         console.log("Uploaded a file!");
       })
       .catch((error) => {
