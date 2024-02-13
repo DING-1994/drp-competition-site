@@ -1,4 +1,5 @@
 import Content from "../components/body/Content";
+// import FileUploadForm from "../components/form/FileUploadForm";
 import HeadingWithLink from "../components/paragraphComponents/HeadingWithLink";
 import { Paragraph } from "../components/paragraphComponents/Paragraph";
 import { useAuthContext } from "../lib/context/AuthContext";
@@ -16,7 +17,7 @@ export default function Submissions({ index, value }: PageProps) {
           <strong>
             {currentUser.displayName} ({currentUser.email})
           </strong>
-          .
+          .{/* <FileUploadForm /> */}
         </Paragraph>
       ) : (
         <Paragraph>You are not signed in.</Paragraph>
