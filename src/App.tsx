@@ -19,9 +19,9 @@ import { appTheme } from "./util/Theme";
 export const TAB_VALUES = {
   Overview: 0,
   Rules: 1,
-  Organization: 2,
-  Leaderboard: 3,
-  Submissions: 4,
+  Leaderboard: 2,
+  Submissions: 3,
+  Organization: 4,
 } as const;
 
 export type TAB_VALUES_TYPE = (typeof TAB_VALUES)[keyof typeof TAB_VALUES];
@@ -48,7 +48,7 @@ export default function App() {
       case "/submissions":
         newValue = TAB_VALUES.Submissions;
         break;
-      case "organization":
+      case "/organization":
         newValue = TAB_VALUES.Organization;
         break;
       default:
