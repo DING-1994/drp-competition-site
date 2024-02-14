@@ -19,12 +19,11 @@ export default function Overview({ index, value }: PageProps) {
         What is this competition?
       </HeadingWithLink>
       <Paragraph>
-        The Drone Routing Problems Challenge ( DRP challenge ) presents
-        participants with a simulated environment to explore the application of
-        reinforcement learning in optimizing drone delivery. Utilizing a virtual
-        platform mimicking real-world delivery scenarios, participants are
-        tasked with developing an agent capable of achieving swift and
-        collision-free navigation to designated destinations.
+      The Drone Routing Problems Challenge (DRP Challenge) presents 
+      participants with a simulated environment to explore the application of 
+      reinforcement learning in optimizing drone delivery. Utilizing a virtual platform 
+      mimicking real-world delivery scenarios, participants are tasked with developing an 
+      agent capable of achieving swift and collision-free navigation to designated destinations.
       </Paragraph>
       <HeadingWithLink id="overview">Overview</HeadingWithLink>
       <Grid container alignItems="center" justifyContent="center" padding={5}>
@@ -36,11 +35,10 @@ export default function Overview({ index, value }: PageProps) {
         collisions.
       </Paragraph>
       <Paragraph>
-        As time progresses, there is an increasing need to optimize
-        transportation. To tackle this issue, let's initially address it within
-        a virtual environment. We hope that such initiatives contribute not only
-        to addressing specific transportation methods but also to the overall
-        transportation problem.
+        As time progresses, there is an increasing need to optimize transportation. 
+        To tackle this issue, let's initially address it within a virtual environment 
+        and hope that such initiatives contribute not only to addressing specific 
+        transportation methods but also to the overall transportation problem.
       </Paragraph>
       <Paragraph>
         At the heart of DRP lies the goal of optimizing routes for a fleet of
@@ -48,10 +46,10 @@ export default function Overview({ index, value }: PageProps) {
         goods.
       </Paragraph>
       <Paragraph>
-      The DRP has applications not only to drones but also to aerial delivery
-      robots, which travel along wires like a cable car as shown in the following figure.
-      Aerial delivery robots have already been demonstrated in urban areas, and DRP is a 
-      realistic and urgent issue that is expected to have industrial applications. 
+        The DRP has applications not only to drones but also to aerial delivery
+        robots, which travel along wires like a cable car as shown in the following figure.
+        Aerial delivery robots have already been demonstrated in urban areas, 
+        and DRP is a realistic and urgent issue expected to have industrial applications.
       </Paragraph>
       <Grid container alignItems="center" justifyContent="center" padding={5}>
         <img
@@ -62,9 +60,9 @@ export default function Overview({ index, value }: PageProps) {
       </Grid>
       <HeadingWithLink id="introduction">Introduction</HeadingWithLink>
       <Paragraph>
-        All material related to this competition are contained in this 
+        All material related to this competition is contained in this
         <a href="https://github.com/DrpChallenge/main">GitHub repository</a>.
-        For specific instructions about the code, please refer to this page [introduction].
+        For specific instructions about the code, please refer to <a href="https://github.com/DrpChallenge/main/blob/main/README.md"> this page </a>.
       </Paragraph>
       <HeadingWithLink id="registration">Registration</HeadingWithLink>
       <Paragraph>
@@ -76,12 +74,12 @@ export default function Overview({ index, value }: PageProps) {
 
       <HeadingWithLink id="environment">Environment</HeadingWithLink>
       <Paragraph>
-        The Aerial Delivery Robots environment is This  non-grid space 
-        environment consists of nodes and edges, and edges have some distances.
+        The Aerial Delivery Robots environment is a non-grid space environment 
+        consisting of nodes and edges, with edges having certain distances.
         The agents move on the map according to some kind of policy, and under
-        any circumstances, they cannot exist outside of nodes and edges. Each
-        agent has different nodes as their destination and departure state. In
-        addition, This environment is described in Python.
+        any circumstances, they cannot exist outside of nodes and edges. 
+        Each agent has different nodes as their destination and departure state. 
+        Additionally, this environment is described in Python.
         Please visit <a href="https://github.com/DrpChallenge/main"> GitHub repository</a>
         to get more information about the environment.
       </Paragraph>
@@ -94,12 +92,12 @@ export default function Overview({ index, value }: PageProps) {
       </Grid>
       <HeadingWithLink id="requirement">Requirement</HeadingWithLink>
       <Paragraph>
-        We can learn agents by using Stable-baseline 3 ( SB3 ) and gymnasium. When
-        we try to learn agents, we need to install both of them. SB 3 can
-        customize policy networks, and save and load policy. Also, By using
-        Wandb, we can take more detailed logs of agents' movements. Please see
-        Installation page[Introduction/installation] if you want to get further
-        information.
+        Agents can be trained using Stable-baseline 3 (SB3) and gymnasium. When
+        When attempting to train agents, both of them need to be installed.
+        SB3 can customize policy networks and save and load policies. Additionally,
+        by using Wandb, we can capture more detailed logs of agents' movements. 
+        Please refer to <a href="https://github.com/DrpChallenge/main"> the Installation page </a> 
+        if you want to get further information.
       </Paragraph>
       <HeadingWithLink id="important-date">Important Date</HeadingWithLink>
       <Ul>
@@ -159,10 +157,10 @@ export default function Overview({ index, value }: PageProps) {
       </Ul>
       <Paragraph>
         <strong>
-          Attention: The times of submission are not limited to the submission
-          period. The latest submission is used to determine the finalist.
+          Attention: Submission times are not limited to the submission period. 
+          The latest submission is used to determine the finalist.
         </strong>{" "}
-        More information about submission are described in{" "}
+          More information about submission is described in{" "}
         <Link to="/submission">Submission</Link> page.
       </Paragraph>
       <HeadingWithLink id="other-rules-and-guidelines">

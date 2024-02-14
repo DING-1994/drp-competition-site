@@ -13,11 +13,12 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
       </HeadingWithLink>
       <Paragraph>
         Welcome to the AAMAS 2024 Drone Delivery Routing Problems Competition.
-        These are the Rules and Guidelines of this competition. This challenge is organized
-        by Shiyao Ding, Hideki Aoyama, Donghui Lin, and Fumito Uwano. <a href="https://github.com/DrpChallenge/main">GitHub</a> and
+        Here are the Rules and Guidelines of this competition. This challenge is organized
+        by Shiyao Ding, Hideki Aoyama, Donghui Lin, and Fumito Uwano. 
+        <a href="https://github.com/DrpChallenge/main">GitHub</a> and
         this website provide information about this competition. Please read
-        these rules carefully. If you don't agree with ( or cannot comply with )
-        the rules, you may not participate in this Challenge.
+        these rules carefully. If you disagree with the rules, or cannot comply with them, 
+        you may not participate in this Challenge.
       </Paragraph>
       <Paragraph>
         This competition aims to advance various disciplines such as logistics,
@@ -53,7 +54,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
       <HeadingWithLink id="q-and-a">Q&A</HeadingWithLink>
       <Paragraph>
         To support participants and ensure the success of this competition, we
-        plan to accept questions from participants. A<a href="https://github.com/DrpChallenge/main"> GitHub
+        plan to accept questions from participants. A <a href="https://github.com/DrpChallenge/main">GitHub
         repository</a> will be set up to handle participant questions. The content
         of the Q&A session will be made publicly available on the webpage to
         ensure all participants have access to the information unless the
@@ -66,19 +67,17 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         Registration and Participation
       </HeadingWithLink>
       <Paragraph>
-        To participate in this competition, the team must complete the following
-        form from the "Participate" button on the top.
+        To participate in this competition, teams must complete the registration form accessed via the "Participate" button at the top of the page.
       </Paragraph>
       <Paragraph>
-        You can participate in this Challenge alone or as a team. These are no
-        maximum team member and the minimum team size is one person.
+        You can participate in this Challenge alone or as a team. There is no maximum team size, and the minimum team size is one person.
         Participants may not collaborate unless those participants entered this
         Challenge as a team; participants who are members of the same team may
         collaborate with one another. Teams may not be merged.
       </Paragraph>
 
       <HeadingWithLink id="date">Date</HeadingWithLink>
-      <Paragraph>The following schedule are being devised.</Paragraph>
+      <Paragraph>The following schedule is being devised.</Paragraph>
       <Ul>
         <li>Open homepage and start registration:2024.03.15 10:30 UTC+9</li>
         <li>Submission period:2024.03.16 - 2024.04.15</li>
@@ -102,26 +101,30 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
       <Paragraph>
         In this competition, <strong>three maps</strong> with different
         scalability and shapes are provided, each consisting of{" "}
-        <strong>ten patterns</strong>
-        with different starting and goal points. This results in a total of{" "}
+        <strong>ten patterns</strong> with different starting and goal points.
+        This results in a total of{" "}
         <strong>30 data sets</strong>, used to calculate average values for{" "}
-        <em>goal rate</em> and
-        <em>moving time</em>. We calculate the score as the following equation.
+        <em>goal rate</em> and <em>moving time</em>. We calculate the score as
+        the following equation.
       </Paragraph>
       <Paragraph>We calculate the score as the following equation.</Paragraph>
-      <BlockMath math="score=goal\_rate + optim\_rate = \frac{N\_reach}{N} + \frac{Dist_{low}}{Dist_{real}}" />
+      <BlockMath
+        math="score=goal\_rate + optim\_rate = \frac{N\_reach}{N} + \frac{Dist_{low}}{Dist_{real}}"
+      />
       <Paragraph>
-        ,where <InlineMath>goal\_rate</InlineMath> is the goal rate, calculated
+        where <InlineMath>goal\_rate</InlineMath> is the goal rate, calculated
         as the ratio of the number of agents that have reached their goals to
         the total number of agents.
         <InlineMath>{"Dist_{low}"}</InlineMath> represents the summation of the
         shortest path distances for all agents, which serves as a lower bound of
         the optimal solution. <InlineMath>{"Dist_{real}"}</InlineMath> is the
-        total distance that all agents have covered. The goal rate is the percentage
-        of trial times in which all agents can reach their destination nodes
-        without collision.
-        If they reach the same score, <InlineMath>optim\_rate</InlineMath>would be the indicator to rank. 
-        The scores submitted during the final submission period will be considered for the final evaluation.
+        total distance that all agents have covered. The goal rate is the
+        percentage of trial times in which all agents can reach their destination
+        nodes without collision.
+        If they reach the same score, <InlineMath>optim\_rate</InlineMath> would
+        be the indicator to rank.
+        The scores submitted during the final submission period will be
+        considered for the final evaluation.
         During the submission period, participants can submit their
         programs with many times, the highest score from the submission will be
         used for the final evaluation.
@@ -143,8 +146,8 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
           prohibited to reuse code from other teams.
         </li>
         <li>
-          Academic report ( optional ) : Brief instruction of the method, one page ( excluding reference ) ,
-          should be written in English.
+          Academic report ( optional ) : Brief instruction of the method, one
+          page ( excluding reference ) , should be written in English.
           Whether to submit the academic report is optional.
           If there is any related information used to derive the
           results, this information must be contained in their academic report.

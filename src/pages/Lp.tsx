@@ -13,8 +13,8 @@ export default function Lp({ value }: LpProps) {
     <>
       <Overview index={TAB_VALUES.Overview} value={value} />
       <RulesAndGuidelines index={TAB_VALUES.Rules} value={value} />
-      <Leaderboard index={TAB_VALUES.Leaderboard} value={value} />
       <Organization index={TAB_VALUES.Organization} value={value} />
+      <Leaderboard index={TAB_VALUES.Leaderboard} value={value} />
     </>
   );
 }
