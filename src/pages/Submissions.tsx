@@ -1,5 +1,5 @@
 import Content from "../components/body/Content";
-// import FileUploadForm from "../components/form/FileUploadForm";
+import FileUploadForm from "../components/form/FileUploadForm";
 import HeadingWithLink from "../components/paragraphComponents/HeadingWithLink";
 import { Paragraph } from "../components/paragraphComponents/Paragraph";
 import { useAuthContext } from "../lib/context/AuthContext";
@@ -12,13 +12,15 @@ export default function Submissions({ index, value }: PageProps) {
       <HeadingWithLink id="submissions">Submissions</HeadingWithLink>
       <Paragraph>This is the submissions page.</Paragraph>
       {currentUser ? (
-        <Paragraph>
-          You are signed in as{" "}
-          <strong>
-            {currentUser.displayName} ({currentUser.email})
-          </strong>
-          .{/* <FileUploadForm /> */}
-        </Paragraph>
+        <>
+          <Paragraph>
+            You are signed in as{" "}
+            <strong>
+              {currentUser.displayName} ({currentUser.email})
+            </strong>
+          </Paragraph>
+          <FileUploadForm />
+        </>
       ) : (
         <Paragraph>You are not signed in.</Paragraph>
       )}
