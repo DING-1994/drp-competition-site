@@ -2,6 +2,7 @@ import HeadingWithLink from "../components/paragraphComponents/HeadingWithLink";
 import { Paragraph } from "../components/paragraphComponents/Paragraph";
 import { PageProps } from "./props/PageProps";
 import Content from "../components/body/Content";
+import Ul from "../components/paragraphComponents/UnorderedList";
 
 export default function Organization({ index, value }: PageProps) {
   return (
@@ -11,7 +12,7 @@ export default function Organization({ index, value }: PageProps) {
         The organizing team consists of experts and students from various
         institutions.
       </Paragraph>
-      <ul>
+      <Ul>
         <li>
           Shiyao Ding (Kyoto University,{" "}
           <a href="https://www.dingshiyao.com/">HP</a>)
@@ -34,7 +35,7 @@ export default function Organization({ index, value }: PageProps) {
         <li>Ryo Magoshi (Kyoto University)</li>
         <li>Lee Kunwoo (Kyoto University)</li>
         <li>Atsushi Yanagisawa (Kyoto University)</li>
-      </ul>
+      </Ul>
     </Content>
   );
 }
