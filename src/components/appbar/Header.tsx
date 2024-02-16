@@ -15,6 +15,7 @@ import SignUpForm from "../form/SignUpForm";
 import SignInForm from "../form/SignInForm";
 import { UserInfo } from "../../hooks/useUserInfo";
 import { FormInfo } from "../../hooks/useFormInfo";
+import { logout } from "../../lib/firebase/auth";
 
 interface HeaderProps {
   setTabValue: React.Dispatch<React.SetStateAction<TAB_VALUES_TYPE>>;
@@ -52,10 +53,7 @@ export default function Header({
           variant="contained"
           color="primary"
           sx={{ margin: "1rem", textTransform: "none", fontWeight: "bold" }}
-          // onClick={() => signInFormInfoState.setFormOpen(true)}
-          onClick={() => {
-            console.log("Sign in button clicked");
-          }}
+          onClick={() => signInFormInfoState.setFormOpen(true)}
         >
           Sign in
         </Button>
@@ -63,10 +61,15 @@ export default function Header({
           variant="contained"
           color="primary"
           sx={{ margin: "1rem", textTransform: "none", fontWeight: "bold" }}
-          // onClick={() => signUpFormInfoState.setFormOpen(true)}
-          onClick={() => {
-            console.log("Participate button clicked");
-          }}
+          onClick={() => logout()}
+        >
+          Sign out
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          sx={{ margin: "1rem", textTransform: "none", fontWeight: "bold" }}
+          onClick={() => signUpFormInfoState.setFormOpen(true)}
         >
           Participate
         </Button>

@@ -19,11 +19,12 @@ export default function Overview({ index, value }: PageProps) {
         What is this competition?
       </HeadingWithLink>
       <Paragraph>
-      The Drone Routing Problems Challenge (DRP Challenge) presents 
-      participants with a simulated environment to explore the application of 
-      reinforcement learning in optimizing drone delivery. Utilizing a virtual platform 
-      mimicking real-world delivery scenarios, participants are tasked with developing an 
-      agent capable of achieving swift and collision-free navigation to designated destinations.
+        The Drone Routing Problems Challenge (DRP Challenge) presents
+        participants with a simulated environment to explore the application of
+        reinforcement learning in optimizing drone delivery. Using a virtual
+        platform that mimics real-world delivery scenarios, participants are
+        tasked with developing an agent capable of achieving swift, efficient,
+        and collision-free navigation to designated destinations.
       </Paragraph>
       <HeadingWithLink id="overview">Overview</HeadingWithLink>
       <Grid container alignItems="center" justifyContent="center" padding={5}>
@@ -35,21 +36,22 @@ export default function Overview({ index, value }: PageProps) {
         collisions.
       </Paragraph>
       <Paragraph>
-        As time progresses, there is an increasing need to optimize transportation. 
-        To tackle this issue, let's initially address it within a virtual environment 
-        and hope that such initiatives contribute not only to addressing specific 
-        transportation methods but also to the overall transportation problem.
+        As time progresses, there is an increasing need to optimize
+        transportation. To tackle this issue, let's initially address it within
+        a virtual environment and hope that such initiatives contribute not only
+        to addressing specific transportation methods but also to the overall
+        transportation problem.
       </Paragraph>
       <Paragraph>
-        At the heart of DRP lies the goal of optimizing routes for a fleet of
-        drones to ensure efficient, timely, and cost-effective delivery of
-        goods.
+        Central to DRP lies the goal of optimizing routes for a fleet of drones
+        to facilitate efficient, timely, and cost-effective delivery of goods.
       </Paragraph>
       <Paragraph>
         The DRP has applications not only to drones but also to aerial delivery
-        robots, which travel along wires like a cable car as shown in the following figure.
-        Aerial delivery robots have already been demonstrated in urban areas, 
-        and DRP is a realistic and urgent issue expected to have industrial applications.
+        robots, which travel along wires like a cable car as shown in the
+        following figure. Aerial delivery robots have already been demonstrated
+        in urban areas, and DRP is a realistic and urgent issue expected to have
+        industrial applications.
       </Paragraph>
       <Grid container alignItems="center" justifyContent="center" padding={5}>
         <img
@@ -62,25 +64,30 @@ export default function Overview({ index, value }: PageProps) {
       <Paragraph>
         All material related to this competition is contained in this
         <a href="https://github.com/DrpChallenge/main">GitHub repository</a>.
-        For specific instructions about the code, please refer to <a href="https://github.com/DrpChallenge/main/blob/main/README.md"> this page </a>.
+        For specific instructions about the code, please refer to{" "}
+        <a href="https://github.com/DrpChallenge/main/blob/main/README.md">
+          {" "}
+          this page{" "}
+        </a>
+        .
       </Paragraph>
       <HeadingWithLink id="registration">Registration</HeadingWithLink>
       <Paragraph>
-        If you have even the slightest interest, let's visit <a href="https://github.com/DrpChallenge/main"> GitHub
-        repository</a> and participate in this
-        competition! To join, click "Participate" on the top right corner of the
-        page.
+        If you are interested interest, please visit{" "}
+        <a href="https://github.com/DrpChallenge/main"> GitHub repository</a>{" "}
+        and participate in this competition! To join, click "Participate" on the
+        top right corner of the page.
       </Paragraph>
 
       <HeadingWithLink id="environment">Environment</HeadingWithLink>
       <Paragraph>
-        The Aerial Delivery Robots environment is a non-grid space environment 
-        consisting of nodes and edges, with edges having certain distances.
-        The agents move on the map according to some kind of policy, and under
-        any circumstances, they cannot exist outside of nodes and edges. 
-        Each agent has different nodes as their destination and departure state. 
-        Additionally, this environment is described in Python.
-        Please visit <a href="https://github.com/DrpChallenge/main"> GitHub repository</a>
+        The Aerial Delivery Robots environment is comprised of nodes and edges,
+        forming a non-grid space environment, with edges representing certain
+        distances. The agents move on the map according to some kind of policy,
+        and under any circumstances, they cannot exist outside of nodes and
+        edges. Each agent has different nodes as their destination and departure
+        state. Please visit{" "}
+        <a href="https://github.com/DrpChallenge/main"> GitHub repository</a>
         to get more information about the environment.
       </Paragraph>
       <Grid container alignItems="center" justifyContent="center" padding={5}>
@@ -92,11 +99,15 @@ export default function Overview({ index, value }: PageProps) {
       </Grid>
       <HeadingWithLink id="requirement">Requirement</HeadingWithLink>
       <Paragraph>
-        Agents can be trained using Stable-baseline 3 (SB3) and gymnasium. When
-        When attempting to train agents, both of them need to be installed.
-        SB3 can customize policy networks and save and load policies. Additionally,
-        by using Wandb, we can capture more detailed logs of agents' movements. 
-        Please refer to <a href="https://github.com/DrpChallenge/main"> the Installation page </a> 
+        Agents can be trained using Stable-baseline 3 (SB3) and gymnasium. Both
+        SB3 and gymnasium need to be installed for agent training.SB3 can
+        customize policy networks and save and load policies. Additionally, by
+        using Wandb, we can capture more detailed logs of agents' movements.
+        Please refer to{" "}
+        <a href="https://github.com/DrpChallenge/main">
+          {" "}
+          the Installation page{" "}
+        </a>
         if you want to get further information.
       </Paragraph>
       <HeadingWithLink id="important-date">Important Date</HeadingWithLink>
@@ -111,10 +122,9 @@ export default function Overview({ index, value }: PageProps) {
       <Paragraph>
         In this competition, <strong>three maps</strong> with different
         scalability and shapes are provided, each consisting of{" "}
-        <strong>ten patterns</strong> with different starting and goal points. 
-        This results in a total of{" "}
-        <strong>30 data sets</strong>, used to calculate average values for{" "}
-        <em>goal rate</em> and
+        <strong>ten patterns</strong> with different starting and goal points.
+        This results in a total of <strong>30 data sets</strong>, used to
+        calculate average values for <em>goal rate</em> and
         <em>moving time</em>. We calculate the score as the following equation.
       </Paragraph>
       <Paragraph>We calculate the score as the following equation.</Paragraph>
@@ -122,15 +132,18 @@ export default function Overview({ index, value }: PageProps) {
       <Paragraph>
         where <InlineMath>goal\_rate</InlineMath> is the goal rate, calculated
         as the ratio of the number of agents that have reached their goals to
-        the total number of agents. (The definition of "goal" and "collusion"
-        are described in this page
-        [Introduction/definition-of-each-action-and-processing-of-corresponding-rewards].
-        )<InlineMath>{"Dist_{low}"}</InlineMath> represents the summation of the
-        shortest path distances for all agents, which serves as a lower bound of
-        the optimal solution. <InlineMath>{"Dist_{real}"}</InlineMath> is the
-        total distance that all agents have covered. Goal rate is the percentage
-        of trail times in which all agents can reach their destination nodes
-        without collision.
+        the total number of agents. (The definition of "goal" and "collision"
+        are described in{" "}
+        <a href="https://github.com/DrpChallenge/main">
+          {" "}
+          the Installation page{" "}
+        </a>
+        . )<InlineMath>{"Dist_{low}"}</InlineMath> represents the summation of
+        the shortest path distances for all agents, which serves as a lower
+        bound of the optimal solution. <InlineMath>{"Dist_{real}"}</InlineMath>{" "}
+        is the total distance that all agents have covered. Goal rate is the
+        percentage of trail times in which all agents can reach their
+        destination nodes without collision.
       </Paragraph>
       <HeadingWithLink id="submission">Submission</HeadingWithLink>
       <Paragraph>
@@ -147,20 +160,21 @@ export default function Overview({ index, value }: PageProps) {
       </Paragraph>
       <Ul>
         <li>
-          Source Code: If any part of the code is quoted, participants must
+          Source code: If any part of the code is quoted, participants must
           indicate the source of the code.
         </li>
         <li>
-          Academic report ( optional ): brief instruction of the method, one page ( excluding reference ).
-          Whether to submit the academic report is optional.
+          Academic report ( optional ): Brief instruction of the method, one
+          page ( excluding reference ). Whether to submit the academic report is
+          optional.
         </li>
       </Ul>
       <Paragraph>
         <strong>
-          Attention: Submission times are not limited to the submission period. 
+          Attention: Submission times are not limited to the submission period.
           The latest submission is used to determine the finalist.
         </strong>{" "}
-          More information about submission is described in{" "}
+        More information about submission is described in{" "}
         <Link to="/submission">Submission</Link> page.
       </Paragraph>
       <HeadingWithLink id="other-rules-and-guidelines">

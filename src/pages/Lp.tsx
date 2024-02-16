@@ -1,8 +1,8 @@
 import Overview from "./Overview";
 import RulesAndGuidelines from "./RulesAndGuidelines";
-import { TAB_VALUES, TAB_VALUES_TYPE } from "../App";
-import Leaderboard from "./Leaderboard";
 import Organization from "./Organization";
+import Submissions from "./Submissions";
+import { TAB_VALUES, TAB_VALUES_TYPE } from "../App";
 
 interface LpProps {
   value: TAB_VALUES_TYPE;
@@ -14,7 +14,7 @@ export default function Lp({ value }: LpProps) {
       <Overview index={TAB_VALUES.Overview} value={value} />
       <RulesAndGuidelines index={TAB_VALUES.Rules} value={value} />
       <Organization index={TAB_VALUES.Organization} value={value} />
-      <Leaderboard index={TAB_VALUES.Leaderboard} value={value} />
+      <Submissions index={TAB_VALUES.Submissions} value={value} />
     </>
   );
 }
