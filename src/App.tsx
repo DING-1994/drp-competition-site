@@ -10,6 +10,7 @@ import { useUserInfo } from "./hooks/useUserInfo";
 import { AuthProvider } from "./lib/context/AuthContext";
 import Leaderboard from "./pages/Leaderboard";
 import Lp from "./pages/Lp";
+import Organization from "./pages/Organization";
 import Overview from "./pages/Overview";
 import RulesAndGuidelines from "./pages/RulesAndGuidelines";
 import Submissions from "./pages/Submissions";
@@ -20,6 +21,7 @@ export const TAB_VALUES = {
   Rules: 1,
   Leaderboard: 2,
   Submissions: 3,
+  Organization: 4,
 } as const;
 
 export type TAB_VALUES_TYPE = (typeof TAB_VALUES)[keyof typeof TAB_VALUES];
@@ -45,6 +47,9 @@ export default function App() {
         break;
       case "/submissions":
         newValue = TAB_VALUES.Submissions;
+        break;
+      case "/organization":
+        newValue = TAB_VALUES.Organization;
         break;
       default:
         newValue = TAB_VALUES.Overview;
@@ -127,6 +132,15 @@ export default function App() {
               path="/submissions"
               element={
                 <Submissions index={TAB_VALUES.Submissions} value={tabValue} />
+              }
+            />
+            <Route
+              path="/organization"
+              element={
+                <Organization
+                  index={TAB_VALUES.Organization}
+                  value={tabValue}
+                />
               }
             />
           </Routes>
