@@ -19,7 +19,7 @@ export default function Overview({ index, value }: PageProps) {
         What is this competition?
       </HeadingWithLink>
       <Paragraph>
-        The Drone Routing Problems Challenge ( DRP Challenge ) presents
+        The Drone Routing Problems Challenge (DRP Challenge) presents
         participants with a simulated environment to explore the application of
         reinforcement learning in optimizing drone delivery. Using a virtual
         platform that mimics real-world delivery scenarios, participants are
@@ -62,21 +62,20 @@ export default function Overview({ index, value }: PageProps) {
       </Grid>
       <HeadingWithLink id="introduction">Introduction</HeadingWithLink>
       <Paragraph>
-        All material related to this competition is contained in this
+        All material related to this competition is contained in this{" "}
         <a href="https://github.com/DrpChallenge/main">GitHub repository</a>.
         For specific instructions about the code, please refer to{" "}
         <a href="https://github.com/DrpChallenge/main/blob/main/README.md">
-          {" "}
-          this page{" "}
+          this page
         </a>
         .
       </Paragraph>
       <HeadingWithLink id="registration">Registration</HeadingWithLink>
       <Paragraph>
         If you are interested interest, please visit{" "}
-        <a href="https://github.com/DrpChallenge/main"> GitHub repository</a>{" "}
-        and participate in this competition! To join, click "Participate" on the
-        top right corner of the page.
+        <a href="https://github.com/DrpChallenge/main">GitHub repository</a> and
+        participate in this competition! To join, click "Participate" on the top
+        right corner of the page.
       </Paragraph>
 
       <HeadingWithLink id="environment">Environment</HeadingWithLink>
@@ -87,8 +86,8 @@ export default function Overview({ index, value }: PageProps) {
         and under any circumstances, they cannot exist outside of nodes and
         edges. Each agent has different nodes as their destination and departure
         state. Please visit{" "}
-        <a href="https://github.com/DrpChallenge/main"> GitHub repository</a>
-        to get more information about the environment.
+        <a href="https://github.com/DrpChallenge/main">GitHub repository</a> to
+        get more information about the environment.
       </Paragraph>
       <Grid container alignItems="center" justifyContent="center" padding={5}>
         <img
@@ -99,15 +98,12 @@ export default function Overview({ index, value }: PageProps) {
       </Grid>
       <HeadingWithLink id="requirement">Requirement</HeadingWithLink>
       <Paragraph>
-        Agents can be trained using Stable-baseline 3 ( SB3 ) and gymnasium.
-        Both SB3 and gymnasium need to be installed for agent training.SB3 can
+        Agents can be trained using Stable-baseline 3 (SB3) and gymnasium. Both
+        SB3 and gymnasium need to be installed for agent training.SB3 can
         customize policy networks and save and load policies. Additionally, by
         using Wandb, we can capture more detailed logs of agents' movements.
         Please refer to{" "}
-        <a href="https://github.com/DrpChallenge/main">
-          {" "}
-          the Installation page{" "}
-        </a>
+        <a href="https://github.com/DrpChallenge/main">the Installation page</a>{" "}
         if you want to get further information.
       </Paragraph>
       <HeadingWithLink id="important-date">Important Date</HeadingWithLink>
@@ -132,13 +128,13 @@ export default function Overview({ index, value }: PageProps) {
       <Paragraph>
         where <InlineMath>goal\_rate</InlineMath> is the goal rate, calculated
         as the ratio of the number of agents that have reached their goals to
-        the total number of agents. ( The definition of "goal" and "collision"
+        the total number of agents. (The definition of "goal" and "collision"
         are described in{" "}
         <a href="https://github.com/DrpChallenge/main/README.md">
           {" "}
-          the Installation page{" "}
+          the Installation page
         </a>
-        . )<InlineMath>{"Dist_{low}"}</InlineMath> represents the summation of
+        ). <InlineMath>{"Dist_{low}"}</InlineMath> represents the summation of
         the shortest path distances for all agents, which serves as a lower
         bound of the optimal solution. <InlineMath>{"Dist_{real}"}</InlineMath>{" "}
         is the total distance that all agents have covered. Goal rate is the
@@ -149,10 +145,9 @@ export default function Overview({ index, value }: PageProps) {
       <Paragraph>
         Please go to <Link to="/submission">Submission</Link> page and submit
         your work. There are two submission phases, with the pre-submission
-        phase for testing purposes and the final submission phase for
-        evaluation. ( Please see{" "}
-        <Link to="/rules-and-guidelines">Rules and Guidelines</Link> to know
-        about more detailed criteria and finalist. )
+        phase for testing purposes and the final submission phase for evaluation
+        (Please see <Link to="/rules-and-guidelines">Rules and Guidelines</Link>{" "}
+        to know about more detailed criteria and finalist).
       </Paragraph>
       <Paragraph>
         Participants need to submit these four things through Google form during
@@ -164,8 +159,8 @@ export default function Overview({ index, value }: PageProps) {
           indicate the source of the code.
         </li>
         <li>
-          Academic report ( optional ): Brief instruction of the method, one
-          page ( excluding reference ). Whether to submit the academic report is
+          Academic report (optional): Brief instruction of the method, one page
+          (excluding reference). Whether to submit the academic report is
           optional.
         </li>
       </Ul>
