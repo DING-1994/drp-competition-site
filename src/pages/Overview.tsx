@@ -19,7 +19,7 @@ export default function Overview({ index, value }: PageProps) {
         What is this competition?
       </HeadingWithLink>
       <Paragraph>
-        The Drone Routing Problems Challenge (DRP Challenge) presents
+        The Drone Routing Problems Challenge ( DRP Challenge ) presents
         participants with a simulated environment to explore the application of
         reinforcement learning in optimizing drone delivery. Using a virtual
         platform that mimics real-world delivery scenarios, participants are
@@ -31,14 +31,14 @@ export default function Overview({ index, value }: PageProps) {
         <img src={overviewImgUrl} style={{ width: "50vw" }} alt="Overview" />
       </Grid>
       <Paragraph>
-        This challenge tackles a key problem in the real world: How to transport
+        This Challenge tackles a key problem in the real world: How to transport
         goods as fast as possible on a dense transportation network without
         collisions.
       </Paragraph>
       <Paragraph>
         As time progresses, there is an increasing need to optimize
         transportation. To tackle this issue, let's initially address it within
-        a virtual environment and hope that such initiatives contribute not only
+        a virtual environment. We hope that such initiatives contribute not only
         to addressing specific transportation methods but also to the overall
         transportation problem.
       </Paragraph>
@@ -99,8 +99,8 @@ export default function Overview({ index, value }: PageProps) {
       </Grid>
       <HeadingWithLink id="requirement">Requirement</HeadingWithLink>
       <Paragraph>
-        Agents can be trained using Stable-baseline 3 (SB3) and gymnasium. Both
-        SB3 and gymnasium need to be installed for agent training.SB3 can
+        Agents can be trained using Stable-baseline 3 ( SB3 ) and gymnasium.
+        Both SB3 and gymnasium need to be installed for agent training.SB3 can
         customize policy networks and save and load policies. Additionally, by
         using Wandb, we can capture more detailed logs of agents' movements.
         Please refer to{" "}
@@ -132,9 +132,9 @@ export default function Overview({ index, value }: PageProps) {
       <Paragraph>
         where <InlineMath>goal\_rate</InlineMath> is the goal rate, calculated
         as the ratio of the number of agents that have reached their goals to
-        the total number of agents. (The definition of "goal" and "collision"
+        the total number of agents. ( The definition of "goal" and "collision"
         are described in{" "}
-        <a href="https://github.com/DrpChallenge/main">
+        <a href="https://github.com/DrpChallenge/main/README.md">
           {" "}
           the Installation page{" "}
         </a>

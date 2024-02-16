@@ -171,9 +171,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
       </Ul>
       <Paragraph>
         Sharing information among teams is strictly restricted. It is forbidden
-        to use the code of other teams and vice versa. To prevent code
-        plagiarism, participants are prohibited from engaging in direct code
-        exchanges with each other.
+        to use the code of other teams and vice versa.
       </Paragraph>
       <Paragraph>
         If a team fails to meet these criteria, the participant cannot be
