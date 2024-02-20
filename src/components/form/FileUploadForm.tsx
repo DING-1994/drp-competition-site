@@ -3,9 +3,13 @@ import { ref, uploadBytes } from "firebase/storage";
 import { useState } from "react";
 import { storage } from "../../lib/firebase/firebase";
 import styles from "../../styles/FileUploadForm.module.css";
+import { useAuthContext } from "../../lib/context/AuthContext";
 
 export default function FileUploadForm() {
+  const { currentUser } = useAuthContext();
+
   const [file, setFile] = useState<File | null>(null);
+  const [displayFileName, setDisplayFileName] = useState<string>("");
   const [submitDisabled, setSubmitDisabled] = useState(true);
   const [inputDisabled, setInputDisabled] = useState(false);
 
@@ -15,7 +19,21 @@ export default function FileUploadForm() {
     if (event.target.files) {
       const file = event.target.files[event.target.files.length - 1];
       if (validateFile(file)) {
-        setFile(file);
+        setDisplayFileName(file.name);
+
+        const date = new Date();
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are 0-based, so we add 1
+        const day = String(date.getDate()).padStart(2, "0");
+        const hours = String(date.getHours()).padStart(2, "0");
+        const minutes = String(date.getMinutes()).padStart(2, "0");
+        const seconds = String(date.getSeconds()).padStart(2, "0");
+
+        const formattedDate = `${year}-${month}-${day}-${hours}-${minutes}-${seconds}`;
+
+        const newFileName = `${formattedDate}_${currentUser?.displayName}_${currentUser?.email}.zip`;
+        const newFile = new File([file], newFileName, { type: file.type });
+        setFile(newFile);
         setSubmitDisabled(false);
         setInputDisabled(true);
       } else {
@@ -60,7 +78,7 @@ export default function FileUploadForm() {
           Upload
         </Button>
       </form>
-      {file && <p>Selected file: {file.name}</p>}
+      {file && <p>Selected file: {displayFileName}</p>}
     </>
   );
 }
