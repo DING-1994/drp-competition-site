@@ -10,7 +10,7 @@ export default function Submissions({ index, value }: PageProps) {
   return (
     <Content index={index} value={value}>
       <HeadingWithLink id="submissions">Submissions</HeadingWithLink>
-      <Paragraph>This is the submissions page.</Paragraph>
+      <Paragraph>Please upload one ZIP file of your program.</Paragraph>
       {currentUser ? (
         <>
           <Paragraph>
