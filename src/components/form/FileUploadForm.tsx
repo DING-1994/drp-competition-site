@@ -4,13 +4,21 @@ import { useState } from "react";
 import { storage } from "../../lib/firebase/firebase";
 import styles from "../../styles/FileUploadForm.module.css";
 import { useAuthContext } from "../../lib/context/AuthContext";
+import { FormInfo } from "../../hooks/useFormInfo";
 
-export default function FileUploadForm() {
+interface FileUploadFormProps {
+  formInfoState: FormInfo;
+}
+
+export default function FileUploadForm({ formInfoState }: FileUploadFormProps) {
   const { currentUser } = useAuthContext();
-
+  // 提出されたファイル
   const [file, setFile] = useState<File | null>(null);
+  // ファイルの表示名
   const [displayFileName, setDisplayFileName] = useState<string>("");
+  // 提出ボタンの無効化
   const [submitDisabled, setSubmitDisabled] = useState(true);
+  // ファイル選択の無効化
   const [inputDisabled, setInputDisabled] = useState(false);
 
   const validateFile = (file: File) => file.name.split(".").pop() === "zip";
@@ -49,6 +57,7 @@ export default function FileUploadForm() {
     await uploadBytes(storageRef, file as Blob)
       .then((_) => {
         console.log("Uploaded a file!");
+        formInfoState.setFormSentSuccess(true);
       })
       .catch((error) => {
         console.error("Error uploading file: ", error);
