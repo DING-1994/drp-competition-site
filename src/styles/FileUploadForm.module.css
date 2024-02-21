@@ -8,10 +8,16 @@
 }
 
 .file_label {
+  margin: 5px;
   padding: 10px;
-  background-color: #4caf50;
+  background-color: #2196f3;
   color: white;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+.file_label:hover {
+  background-color: #1767a8;
 }
 
 .file_label_disabled {
