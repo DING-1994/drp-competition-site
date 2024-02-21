@@ -21,9 +21,11 @@
 }
 
 .file_label_disabled {
+  margin: 5px;
   padding: 10px;
   background-color: #9e9e9e;
   color: white;
+  border-radius: 5px;
   cursor: not-allowed;
 }
 
