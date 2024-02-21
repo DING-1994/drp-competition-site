@@ -90,6 +90,7 @@ export default function App() {
             setFormSentSuccess={signInFormInfoState.setFormSentSuccess}
             message="Signed in successfully!"
           />
+
           <AlertDialog
             open={signUpFormInfoState.formSentSuccess}
             setOpen={signUpFormInfoState.setFormSentSuccess}
