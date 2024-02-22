@@ -29,6 +29,9 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
     username: "",
     email: "",
     password: "",
+    teamName: "",
+    teamPassword: "",
+    participateAsTeamMember: false,
   });
   const [showPassword, setShowPassword] = React.useState(false);
 
@@ -81,6 +84,9 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
         username: "",
         email: "",
         password: "",
+        teamName: "",
+        teamPassword: "",
+        participateAsTeamMember: false,
       });
     }
   };
@@ -151,6 +157,13 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
         <RadioGroup
           defaultValue="participate-as-individual"
           name="participation-choice"
+          onChange={(e) => {
+            const value = e.target.value === "participate-as-a-team-member";
+            setFormValue((prevState) => ({
+              ...prevState,
+              participateAsTeamMember: value,
+            }));
+          }}
         >
           <FormControlLabel
             value="participate-as-individual"
@@ -163,6 +176,39 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
             label="Participate as a team member"
           />
         </RadioGroup>
+        {/* Team Info Fields */}
+        {formValue.participateAsTeamMember && (
+          <>
+            <TextField
+              margin="dense"
+              id="teamName"
+              label="Team Name"
+              type="text"
+              fullWidth
+              value={formValue.teamName}
+              onChange={(e) =>
+                setFormValue((prevState) => ({
+                  ...prevState,
+                  teamName: e.target.value,
+                }))
+              }
+            />
+            <TextField
+              margin="dense"
+              id="teamPassword"
+              label="Team Password"
+              type="password"
+              fullWidth
+              value={formValue.teamPassword}
+              onChange={(e) =>
+                setFormValue((prevState) => ({
+                  ...prevState,
+                  teamPassword: e.target.value,
+                }))
+              }
+            />
+          </>
+        )}
         <DialogActions>
           <Button
             onClick={() => formInfoState.setFormOpen(false)}
