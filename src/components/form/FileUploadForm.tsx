@@ -58,6 +58,9 @@ export default function FileUploadForm({ formInfoState }: FileUploadFormProps) {
       .then((_) => {
         console.log("Uploaded a file!");
         formInfoState.setFormSentSuccess(true);
+        setSubmitDisabled(true);
+        setInputDisabled(false);
+        setFile(null);
       })
       .catch((error) => {
         console.error("Error uploading file: ", error);
@@ -66,7 +69,12 @@ export default function FileUploadForm({ formInfoState }: FileUploadFormProps) {
 
   return (
     <>
-      <form onSubmit={uploadFile}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          uploadFile();
+        }}
+      >
         <div className={styles.file_upload}>
           <input
             type="file"
