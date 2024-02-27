@@ -7,6 +7,7 @@ import {
   DialogContent,
   DialogTitle,
   Toolbar,
+  Typography,
 } from "@mui/material";
 import { TAB_VALUES_TYPE } from "../../App";
 
@@ -31,70 +32,92 @@ export default function Header({
   userInfoState,
 }: HeaderProps) {
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: "white", padding: 0 }}>
-      <Toolbar
-        sx={{
-          padding: 0,
-          marginLeft: {
-            xs: "4vw",
-            sm: "4vw",
-            md: "8vw",
-          },
-          marginRight: {
-            xs: "4vw",
-            sm: "4vw",
-            md: "8vw",
-          },
-        }}
+    <>
+      {/* drp Challengeを左上に表示 */}
+      <Typography variant="h4" component="div" 
+          sx={{ 
+            color: 'primary', 
+            backgroundColor: "white",
+            padding: 1,
+            marginLeft: {
+              xs: "4vw",
+              sm: "4vw",
+              md: "8vw",
+            },
+            marginRight: {
+              xs: "4vw",
+              sm: "4vw",
+              md: "8vw",
+            },
+          }}
       >
-        <HeaderTabs setTabValue={setTabValue} />
-        <Box sx={{ flexGrow: 1 }} />
-        <Button
-          variant="contained"
-          color="primary"
-          sx={{ margin: "1rem", textTransform: "none", fontWeight: "bold" }}
-          onClick={() => signInFormInfoState.setFormOpen(true)}
+        DRP Challenge
+      </Typography>
+      <AppBar position="sticky" sx={{ backgroundColor: "white", padding: 0 }}>
+        <Toolbar
+          sx={{
+            padding: 0,
+            marginLeft: {
+              xs: "4vw",
+              sm: "4vw",
+              md: "8vw",
+            },
+            marginRight: {
+              xs: "4vw",
+              sm: "4vw",
+              md: "8vw",
+            },
+          }}
         >
-          Sign in
-        </Button>
-        <Button
-          variant="contained"
-          color="primary"
-          sx={{ margin: "1rem", textTransform: "none", fontWeight: "bold" }}
-          onClick={() => logout()}
-        >
-          Sign out
-        </Button>
-        <Button
-          variant="contained"
-          color="primary"
-          sx={{ margin: "1rem", textTransform: "none", fontWeight: "bold" }}
-          onClick={() => signUpFormInfoState.setFormOpen(true)}
-        >
-          Participate
-        </Button>
-        <Dialog
-          open={signUpFormInfoState.formOpen}
-          onClose={() => signUpFormInfoState.setFormOpen(false)}
-        >
-          <DialogTitle>Register</DialogTitle>
-          <DialogContent>
-            <SignUpForm formInfoState={signUpFormInfoState} />
-          </DialogContent>
-        </Dialog>
-        <Dialog
-          open={signInFormInfoState.formOpen}
-          onClose={() => signInFormInfoState.setFormOpen(false)}
-        >
-          <DialogTitle>Sign In</DialogTitle>
-          <DialogContent>
-            <SignInForm
-              formInfoState={signInFormInfoState}
-              userInfoState={userInfoState}
-            />
-          </DialogContent>
-        </Dialog>
-      </Toolbar>
-    </AppBar>
+          <HeaderTabs setTabValue={setTabValue} />
+          <Box sx={{ flexGrow: 1 }} />
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{ margin: "1rem", textTransform: "none", fontWeight: "bold" }}
+            onClick={() => signInFormInfoState.setFormOpen(true)}
+          >
+            Sign in
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{ margin: "1rem", textTransform: "none", fontWeight: "bold" }}
+            onClick={() => logout()}
+          >
+            Sign out
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{ margin: "1rem", textTransform: "none", fontWeight: "bold" }}
+            onClick={() => signUpFormInfoState.setFormOpen(true)}
+          >
+            Participate
+          </Button>
+          <Dialog
+            open={signUpFormInfoState.formOpen}
+            onClose={() => signUpFormInfoState.setFormOpen(false)}
+          >
+            <DialogTitle>Register</DialogTitle>
+            <DialogContent>
+              <SignUpForm formInfoState={signUpFormInfoState} />
+            </DialogContent>
+          </Dialog>
+          <Dialog
+            open={signInFormInfoState.formOpen}
+            onClose={() => signInFormInfoState.setFormOpen(false)}
+          >
+            <DialogTitle>Sign In</DialogTitle>
+            <DialogContent>
+              <SignInForm
+                formInfoState={signInFormInfoState}
+                userInfoState={userInfoState}
+              />
+            </DialogContent>
+          </Dialog>
+        </Toolbar>
+      </AppBar>
+    </>
   );
 }
