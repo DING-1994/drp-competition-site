@@ -130,7 +130,7 @@ export default function Overview({ index, value }: PageProps) {
         as the ratio of the number of agents that have reached their goals to
         the total number of agents. (The definition of "goal" and "collision"
         are described in{" "}
-        <a href="https://github.com/DrpChallenge/main/README.md">
+        <a href="https://github.com/DrpChallenge/main?tab=readme-ov-file#installation">
           {" "}
           the Installation page
         </a>
