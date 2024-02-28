@@ -1,24 +1,26 @@
-import * as React from "react";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 import {
-  TextField,
-  DialogActions,
   Button,
+  DialogActions,
+  FormControlLabel,
   IconButton,
   InputAdornment,
   LinearProgress,
-  RadioGroup,
-  FormControlLabel,
   Radio,
+  RadioGroup,
+  TextField,
 } from "@mui/material";
-import { Visibility, VisibilityOff } from "@mui/icons-material";
+import { FirebaseError } from "firebase/app";
 import {
   createUserWithEmailAndPassword,
   getAuth,
-  updateProfile,
   sendEmailVerification,
+  updateProfile,
 } from "firebase/auth";
-import { FirebaseError } from "firebase/app";
+import { doc, setDoc } from "firebase/firestore";
+import * as React from "react";
 import { FormInfo } from "../../hooks/useFormInfo";
+import { db } from "../../lib/firebase/firebase";
 
 interface SignUpFormProps {
   formInfoState: FormInfo;
@@ -29,6 +31,7 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
     username: "",
     email: "",
     password: "",
+    organization: "",
     teamName: "",
     teamPassword: "",
     participateAsTeamMember: false,
@@ -42,7 +45,6 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
   const handleSubmit = async (event: React.SyntheticEvent) => {
     event.preventDefault();
     formInfoState.setFormSentLoading(true);
-    console.log(formValue);
     try {
       const auth = getAuth();
       const userCredential = await createUserWithEmailAndPassword(
@@ -53,8 +55,24 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
       await updateProfile(userCredential.user, {
         displayName: formValue.username,
       });
+
+      // まとめて doc に追加
+      const userDoc = {
+        username: formValue.username,
+        email: formValue.email,
+        organization: formValue.organization,
+        participateAsTeamMember: formValue.participateAsTeamMember,
+        teamName: formValue.teamName,
+      };
+
+      await setDoc(doc(db, "users", userCredential.user.uid), userDoc);
+
       await sendEmailVerification(userCredential.user, {
         url: "http://localhost:5173/",
+        // url:
+        //   import.meta.env.VITE_IS_DEV === "true"
+        //     ? "http://localhost:5173"
+        //     : import.meta.env.VITE_HOSTING_URL,
         handleCodeInApp: true,
       })
         .then(() => {
@@ -84,6 +102,7 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
         username: "",
         email: "",
         password: "",
+        organization: "",
         teamName: "",
         teamPassword: "",
         participateAsTeamMember: false,
@@ -153,6 +172,21 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
             ),
           }}
         />
+        <TextField
+          margin="dense"
+          id="organization"
+          label="Organization"
+          type="text"
+          fullWidth
+          value={formValue.organization}
+          onChange={(e) =>
+            setFormValue((prevState) => ({
+              ...prevState,
+              organization: e.target.value,
+            }))
+          }
+        />
+
         {/* participation choice */}
         <RadioGroup
           defaultValue="participate-as-individual"
