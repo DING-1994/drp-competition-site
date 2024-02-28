@@ -69,6 +69,10 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
 
       await sendEmailVerification(userCredential.user, {
         url: "http://localhost:5173/",
+        // url:
+        //   import.meta.env.VITE_IS_DEV === "true"
+        //     ? "http://localhost:5173"
+        //     : import.meta.env.VITE_HOSTING_URL,
         handleCodeInApp: true,
       })
         .then(() => {
