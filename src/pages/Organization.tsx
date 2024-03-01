@@ -14,19 +14,19 @@ export default function Organization({ index, value }: PageProps) {
       </Paragraph>
       <Ul>
         <li>
-          Shiyao Ding (Kyoto University,{" "}
+          Prof. Shiyao Ding (Kyoto University,{" "}
           <a href="https://www.dingshiyao.com/">HP</a>)
         </li>
         <li>
-          Hideki Aoyama (Panasonic Holdings Corporation,{" "}
+          Dr. Hideki Aoyama (Panasonic Holdings Corporation,{" "}
           <a href="https://hidekia.github.io/">HP</a>)
         </li>
         <li>
-          Donghui Lin (Okayama University,{" "}
+          Prof. Donghui Lin (Okayama University,{" "}
           <a href="https://lindh.github.io/">HP</a>)
         </li>
         <li>
-          Fumito Uwano (Okayama University,{" "}
+          Prof. Fumito Uwano (Okayama University,{" "}
           <a href="https://soran.cc.okayama-u.ac.jp/html/24d9a3e377f2d39a74506e4da22f6611_en.html">
             HP
           </a>
@@ -37,6 +37,12 @@ export default function Organization({ index, value }: PageProps) {
         <li>Atsushi Yanagisawa (Kyoto University)</li>
       </Ul>
       <HeadingWithLink id="advisory">Advisory Board</HeadingWithLink>
+      <Ul>
+        <li>
+          Prof. Takayuki Ito (Kyoto University,{" "}
+          <a href="http://www.agent.soc.i.kyoto-u.ac.jp/~ito/">HP</a>)
+        </li>
+      </Ul>
     </Content>
   );
 }
