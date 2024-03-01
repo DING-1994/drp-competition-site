@@ -36,6 +36,7 @@ export default function Organization({ index, value }: PageProps) {
         <li>Lee Kunwoo (Kyoto University)</li>
         <li>Atsushi Yanagisawa (Kyoto University)</li>
       </Ul>
+      <HeadingWithLink id="advisory">Advisory Board</HeadingWithLink>
     </Content>
   );
 }
