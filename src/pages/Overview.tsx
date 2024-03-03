@@ -19,46 +19,23 @@ export default function Overview({ index, value }: PageProps) {
         What is this competition?
       </HeadingWithLink>
       <Paragraph>
-        The Drone Routing Problems Challenge (DRP Challenge) presents
-        participants with a simulated environment to explore the application of
-        reinforcement learning in optimizing drone delivery. Using a virtual
-        platform that mimics real-world delivery scenarios, participants are
-        tasked with developing an agent capable of achieving swift, efficient,
-        and collision-free navigation to designated destinations.
-      </Paragraph>
-      <HeadingWithLink id="overview">Overview</HeadingWithLink>
-      <Grid container alignItems="center" justifyContent="center" padding={5}>
-        <img src={overviewImgUrl} style={{ width: "50vw" }} alt="Overview" />
-      </Grid>
-      <Paragraph>
-        This Challenge tackles a key problem in the real world: How to transport
-        goods as fast as possible on a dense transportation network without
-        collisions.
-      </Paragraph>
-      <Paragraph>
-        As time progresses, there is an increasing need to optimize
-        transportation. To tackle this issue, let's initially address it within
-        a virtual environment. We hope that such initiatives contribute not only
-        to addressing specific transportation methods but also to the overall
-        transportation problem.
-      </Paragraph>
-      <Paragraph>
-        Central to DRP lies the goal of optimizing routes for a fleet of drones
-        to facilitate efficient, timely, and cost-effective delivery of goods.
-      </Paragraph>
-      <Paragraph>
-        The DRP has applications not only to drones but also to aerial delivery
-        robots, which travel along wires like a cable car as shown in the
-        following figure. Aerial delivery robots have already been demonstrated
-        in urban areas, and DRP is a realistic and urgent issue expected to have
-        industrial applications.
-      </Paragraph>
-      <Grid container alignItems="center" justifyContent="center" padding={5}>
+        Welcome to the AAMAS-2024 Drone Routing Problems　(DRP) Challenge.
+        DRP Challenge is a multiple drone delivery scenario, where the objective is to 
+        locate a set of collision-free optimal paths for multiple drones on real-world maps.
+        At the heart of DRP lies the goal of optimizing routes for a fleet of drones to ensure efficient, timely, and cost-effective delivery of goods.
+        Using a virtual platform that mimics real-world delivery scenarios, participants are
+        expected to develop algorithms that facilitate efficient, timely, and cost-effective delivery of goods.
+        <Grid container alignItems="center" justifyContent="center" padding={5}>
         <img
           src={aerialDeliveryRobot}
           style={{ width: "25vw" }}
           alt="Overview"
         />
+      </Grid>
+      </Paragraph>
+      <HeadingWithLink id="overview">Overview</HeadingWithLink>
+      <Grid container alignItems="center" justifyContent="center" padding={5}>
+        <img src={overviewImgUrl} style={{ width: "50vw" }} alt="Overview" />
       </Grid>
       <HeadingWithLink id="introduction">Introduction</HeadingWithLink>
       <Paragraph>
