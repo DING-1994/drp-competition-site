@@ -4,8 +4,8 @@ import { Paragraph } from "../components/paragraphComponents/Paragraph";
 import { PageProps } from "./props/PageProps";
 import Ul from "../components/paragraphComponents/UnorderedList";
 import Content from "../components/body/Content";
-import overviewImgUrl from "../assets/images/overview.png";
-import environmentExampleUrl from "../assets/images/environment_example.png";
+// import overviewImgUrl from "../assets/images/overview.png";
+// import environmentExampleUrl from "../assets/images/environment_example.png";
 import aerialDeliveryRobot from "../assets/images/aerial_delivery_robot.png";
 
 import { BlockMath, InlineMath } from "react-katex";
