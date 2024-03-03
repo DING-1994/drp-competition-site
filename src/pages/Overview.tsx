@@ -15,16 +15,12 @@ import { Link } from "react-router-dom";
 export default function Overview({ index, value }: PageProps) {
   return (
     <Content index={index} value={value}>
-      <HeadingWithLink id="what-is-this-competition">
-        What is this competition?
-      </HeadingWithLink>
       <Paragraph>
-        Welcome to the AAMAS-2024 Drone Routing Problems　(DRP) Challenge.
+        Welcome to the 1st Drone Routing Problems (DRP) Challenge @ AAMAS-2024.
         DRP Challenge is a multiple drone delivery scenario, where the objective is to 
-        locate a set of collision-free optimal paths for multiple drones on real-world maps.
-        At the heart of DRP lies the goal of optimizing routes for a fleet of drones to ensure efficient, timely, and cost-effective delivery of goods.
+        identify a set of collision-free optimal paths for multiple drones on real-world maps.
         Using a virtual platform that mimics real-world delivery scenarios, participants are
-        expected to develop algorithms that facilitate efficient, timely, and cost-effective delivery of goods.
+        expected to develop algorithms that facilitate safe, efficient, and cost-effective drone delivery of goods.
         <Grid container alignItems="center" justifyContent="center" padding={5}>
         <img
           src={aerialDeliveryRobot}
@@ -33,56 +29,7 @@ export default function Overview({ index, value }: PageProps) {
         />
       </Grid>
       </Paragraph>
-      <HeadingWithLink id="overview">Overview</HeadingWithLink>
-      <Grid container alignItems="center" justifyContent="center" padding={5}>
-        <img src={overviewImgUrl} style={{ width: "50vw" }} alt="Overview" />
-      </Grid>
-      <HeadingWithLink id="introduction">Introduction</HeadingWithLink>
-      <Paragraph>
-        All material related to this competition is contained in this{" "}
-        <a href="https://github.com/DrpChallenge/main">GitHub repository</a>.
-        For specific instructions about the code, please refer to{" "}
-        <a href="https://github.com/DrpChallenge/main/blob/main/README.md">
-          this page
-        </a>
-        .
-      </Paragraph>
-      <HeadingWithLink id="registration">Registration</HeadingWithLink>
-      <Paragraph>
-        If you are interested interest, please visit{" "}
-        <a href="https://github.com/DrpChallenge/main">GitHub repository</a> and
-        participate in this competition! To join, click "Participate" on the top
-        right corner of the page.
-      </Paragraph>
 
-      <HeadingWithLink id="environment">Environment</HeadingWithLink>
-      <Paragraph>
-        The Aerial Delivery Robots environment is comprised of nodes and edges,
-        forming a non-grid space environment, with edges representing certain
-        distances. The agents move on the map according to some kind of policy,
-        and under any circumstances, they cannot exist outside of nodes and
-        edges. Each agent has different nodes as their destination and departure
-        state. Please visit{" "}
-        <a href="https://github.com/DrpChallenge/main">GitHub repository</a> to
-        get more information about the environment.
-      </Paragraph>
-      <Grid container alignItems="center" justifyContent="center" padding={5}>
-        <img
-          src={environmentExampleUrl}
-          style={{ width: "30vw" }}
-          alt="Overview"
-        />
-      </Grid>
-      <HeadingWithLink id="requirement">Requirement</HeadingWithLink>
-      <Paragraph>
-        Agents can be trained using Stable-baseline 3 (SB3) and gymnasium. Both
-        SB3 and gymnasium need to be installed for agent training.SB3 can
-        customize policy networks and save and load policies. Additionally, by
-        using Wandb, we can capture more detailed logs of agents' movements.
-        Please refer to{" "}
-        <a href="https://github.com/DrpChallenge/main">the Installation page</a>{" "}
-        if you want to get further information.
-      </Paragraph>
       <HeadingWithLink id="important-date">Important Date</HeadingWithLink>
       <Ul>
         <li>Open homepage and start registration:2024.01.29 10:30 UTC+9</li>
