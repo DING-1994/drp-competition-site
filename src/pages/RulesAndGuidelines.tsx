@@ -11,44 +11,43 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
       <HeadingWithLink id="challenge-description">
         Challenge Description
       </HeadingWithLink>
+      HeadingWithLink id="registration">Registration</HeadingWithLink>
       <Paragraph>
-        Welcome to the AAMAS 2024 Drone Delivery Routing Problems Competition.
-        Here are the Rules and Guidelines of this competition. This challenge is
-        organized by Shiyao Ding, Hideki Aoyama, Donghui Lin, and Fumito Uwano.
-        <a href="https://github.com/DrpChallenge/main">
-          {" "}
-          GitHub repository{" "}
-        </a>{" "}
-        and this homepage provide information about this competition. Please
-        read these rules carefully. If you disagree with the rules, or cannot
-        comply with them, you may not participate in this Challenge.
+        If you are interested interest, please visit{" "}
+        <a href="https://github.com/DrpChallenge/main">GitHub repository</a> and
+        participate in this competition! To join, click "Participate" on the top
+        right corner of the page.
+      </Paragraph>
+            <HeadingWithLink id="submission">Submission</HeadingWithLink>
+      <Paragraph>
+        Please go to <Link to="/submission">Submission</Link> page and submit
+        your work. There are two submission phases, with the pre-submission
+        phase for testing purposes and the final submission phase for evaluation
+        (Please see <Link to="/rules-and-guidelines">Rules and Guidelines</Link>{" "}
+        to know about more detailed criteria and finalist).
       </Paragraph>
       <Paragraph>
-        This competition aims to advance various disciplines such as logistics,
-        computer science, and operations research. It seeks to address a
-        real-world issue encountered by transportation and logistics companies
-        globally. Central to DRP lies the goal of optimizing routes for a fleet
-        of drones to ensure efficient, timely, and cost-effective delivery of
-        goods.
+        Participants need to submit these four things through Google form during
+        the submission period.
       </Paragraph>
-
-      <HeadingWithLink id="environment">Environment</HeadingWithLink>
+      <Ul>
+        <li>
+          Source code: If any part of the code is quoted, participants must
+          indicate the source of the code.
+        </li>
+        <li>
+          Academic report (optional): Brief instruction of the method, one page
+          (excluding reference). Whether to submit the academic report is
+          optional.
+        </li>
+      </Ul>
       <Paragraph>
-        In this competition, we have designed an environment that simulates
-        real-world drone delivery conditions, and participants navigate this
-        environment to complete the task. The environment is a non-grid space
-        consisting of nodes and edges, with distances assigned to the edges,
-        which are created from real-world maps. Multiple agents move across the
-        map based on specific policies and are constrained to exist only on
-        nodes and edges. Each agent has unique nodes as their destination and
-        departure points. The agent can ascertain the positions of other agents
-        only when they appear on an adjacent node. Furthermore, once an agent
-        enters an edge, it maintains its direction until it reaches a node.
-      </Paragraph>
-      <Paragraph>
-        Agents can move until they collide with each other or until all agents
-        reach their respective goals.In this dynamic environment, participants
-        approach problem-solving through an interdisciplinary methodology.
+        <strong>
+          Attention: Submission times are not limited to the submission period.
+          The latest submission is used to determine the finalist.
+        </strong>{" "}
+        More information about submission is described in{" "}
+        <Link to="/submission">Submission</Link> page.
       </Paragraph>
 
       <HeadingWithLink id="q-and-a">Q&A</HeadingWithLink>
