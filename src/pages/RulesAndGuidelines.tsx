@@ -11,7 +11,6 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
       <HeadingWithLink id="challenge-description">
         Challenge Description
       </HeadingWithLink>
-      HeadingWithLink id="registration">Registration</HeadingWithLink>
       <Paragraph>
         If you are interested interest, please visit{" "}
         <a href="https://github.com/DrpChallenge/main">GitHub repository</a> and
