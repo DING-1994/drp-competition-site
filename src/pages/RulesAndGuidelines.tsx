@@ -8,29 +8,6 @@ import { BlockMath, InlineMath } from "react-katex";
 export default function RulesAndGuidelines({ index, value }: PageProps) {
   return (
     <Content index={index} value={value}>
-      <HeadingWithLink id="challenge-description">
-        Challenge Description
-      </HeadingWithLink>
-      <Paragraph>
-        Welcome to the AAMAS 2024 Drone Delivery Routing Problems Competition.
-        Here are the Rules and Guidelines of this competition. This challenge is
-        organized by Shiyao Ding, Hideki Aoyama, Donghui Lin, and Fumito Uwano.
-        <a href="https://github.com/DrpChallenge/main">
-          {" "}
-          GitHub repository{" "}
-        </a>{" "}
-        and this homepage provide information about this competition. Please
-        read these rules carefully. If you disagree with the rules, or cannot
-        comply with them, you may not participate in this Challenge.
-      </Paragraph>
-      <Paragraph>
-        This competition aims to advance various disciplines such as logistics,
-        computer science, and operations research. It seeks to address a
-        real-world issue encountered by transportation and logistics companies
-        globally. Central to DRP lies the goal of optimizing routes for a fleet
-        of drones to ensure efficient, timely, and cost-effective delivery of
-        goods.
-      </Paragraph>
 
       <HeadingWithLink id="environment">Environment</HeadingWithLink>
       <Paragraph>
