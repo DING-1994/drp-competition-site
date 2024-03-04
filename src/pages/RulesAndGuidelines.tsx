@@ -22,6 +22,14 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         a team; participants who are members of the same team may collaborate
         with one another. Teams may not be merged.
       </Paragraph>
+      <HeadingWithLink id="submission">Submission</HeadingWithLink>
+      <Paragraph>
+        Conditioned upon compliance with these rules, the Organizers will award
+        Prizes to the participants with the highest scores, which are evaluated
+        by the competition evaluation criteria ( defined below ). Participants
+        need to submit these four things through Google form during the
+        submission period.
+      </Paragraph>
 
       <HeadingWithLink id="q-and-a">Q&A</HeadingWithLink>
       <Paragraph>
@@ -36,14 +44,6 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         guide on using Stable Baselines.
       </Paragraph>
 
-      <HeadingWithLink id="submission">Submission</HeadingWithLink>
-      <Paragraph>
-        Conditioned upon compliance with these rules, the Organizers will award
-        Prizes to the participants with the highest scores, which are evaluated
-        by the competition evaluation criteria ( defined below ). Participants
-        need to submit these four things through Google form during the
-        submission period.
-      </Paragraph>
       <Ul>
         <li>
           Source code: Please provide all the code used to generate these
