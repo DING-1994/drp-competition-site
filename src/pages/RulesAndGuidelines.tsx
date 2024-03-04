@@ -3,7 +3,7 @@ import { Paragraph } from "../components/paragraphComponents/Paragraph";
 import { PageProps } from "./props/PageProps";
 import Content from "../components/body/Content";
 import Ul from "../components/paragraphComponents/UnorderedList";
-import { BlockMath, InlineMath } from "react-katex";
+// import { BlockMath, InlineMath } from "react-katex";
 
 export default function RulesAndGuidelines({ index, value }: PageProps) {
   return (
