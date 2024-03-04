@@ -8,9 +8,9 @@ import Content from "../components/body/Content";
 // import environmentExampleUrl from "../assets/images/environment_example.png";
 import aerialDeliveryRobot from "../assets/images/aerial_delivery_robot.png";
 
-import { BlockMath, InlineMath } from "react-katex";
+// import { BlockMath, InlineMath } from "react-katex";
 import "katex/dist/katex.min.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function Overview({ index, value }: PageProps) {
   return (
