@@ -68,11 +68,11 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
       await setDoc(doc(db, "users", userCredential.user.uid), userDoc);
 
       await sendEmailVerification(userCredential.user, {
-        url: "http://localhost:5173/",
-        // url:
-        //   import.meta.env.VITE_IS_DEV === "true"
-        //     ? "http://localhost:5173"
-        //     : import.meta.env.VITE_HOSTING_URL,
+        // url: "http://localhost:5173/",
+        url:
+          import.meta.env.VITE_IS_DEV === "true"
+            ? "http://localhost:5173"
+            : import.meta.env.VITE_HOSTING_URL,
         handleCodeInApp: true,
       })
         .then(() => {
