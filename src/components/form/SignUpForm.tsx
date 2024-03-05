@@ -2,12 +2,12 @@ import { Visibility, VisibilityOff } from "@mui/icons-material";
 import {
   Button,
   DialogActions,
-  FormControlLabel,
+  // FormControlLabel,
   IconButton,
   InputAdornment,
   LinearProgress,
-  Radio,
-  RadioGroup,
+  // Radio,
+  // RadioGroup,
   TextField,
 } from "@mui/material";
 import { FirebaseError } from "firebase/app";
@@ -188,7 +188,7 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
         />
 
         {/* participation choice */}
-        <RadioGroup
+        {/* <RadioGroup
           defaultValue="participate-as-individual"
           name="participation-choice"
           onChange={(e) => {
@@ -209,7 +209,7 @@ export default function SignUpForm({ formInfoState }: SignUpFormProps) {
             control={<Radio />}
             label="Participate as a team member"
           />
-        </RadioGroup>
+        </RadioGroup> */}
         {/* Team Info Fields */}
         {formValue.participateAsTeamMember && (
           <>
