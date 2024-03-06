@@ -19,9 +19,9 @@ import { appTheme } from "./util/Theme";
 export const TAB_VALUES = {
   Overview: 0,
   Rules: 1,
-  Leaderboard: 2,
+  Organization: 2,
   Submissions: 3,
-  Organization: 4,
+  Leaderboard: 4,
 } as const;
 
 export type TAB_VALUES_TYPE = (typeof TAB_VALUES)[keyof typeof TAB_VALUES];
