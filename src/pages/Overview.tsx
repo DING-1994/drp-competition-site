@@ -30,15 +30,6 @@ export default function Overview({ index, value }: PageProps) {
       </Grid>
       </Paragraph>
 
-      <HeadingWithLink id="important-date">Important Date</HeadingWithLink>
-      <Ul>
-        <li>Open homepage and start registration:2024.02.07 </li>
-        <li>Contribution period:2024.02.07 - 2024.04.01</li>
-        <li>Submission deadline of contributions:2024.04.01 23:59 AoE</li>
-        <li>Finalist Announcement:2024.04.10 </li>
-        <li>Agenda Publishment:2024.04.17 </li>
-      </Ul>
-
     </Content>
   );
 }
