@@ -19,7 +19,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
       </Paragraph>
       <HeadingWithLink id="submission">Submission</HeadingWithLink>
       <Paragraph>
-        After completing registration, participants can begin to develop their contributions. 
+        After completing registration, participants can begin to develop their contributions　by using the <a href="https://github.com/DrpChallenge/main">GitHub repository</a>. 
         You are required to submit a zip file containing the following components:
       </Paragraph>
       <Ul>
@@ -36,7 +36,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
 
       <HeadingWithLink id="prizes">Prizes</HeadingWithLink>
       <Paragraph>
-        Each submission will be scored and ranked based on specific evaluation metrics. 
+        Each submission will be scored and ranked based on specific <a href="https://github.com/DrpChallenge/main?tab=readme-ov-file#evaluation">evaluation metrics</a>. 
         Certificates will be awarded to all participants whose programs run successfully. 
         Additionally, the top 3 teams will be recognized with 1st, 2nd, and 3rd prizes, respectively. 
         We conduct a thorough examination of each submission to ensure it adheres to the following criteria:
