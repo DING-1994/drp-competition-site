@@ -16,7 +16,7 @@ export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
     switch (path) {
       case "/overview":
         return TAB_VALUES.Overview;
-      case "/guidelines":
+      case "/rules-and-guidelines":
         return TAB_VALUES.Rules;
       case "/leaderboard":
         return TAB_VALUES.Leaderboard;
@@ -63,9 +63,9 @@ export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
         sx={{ textTransform: "none", fontWeight: "bold" }}
       />
       <Tab
-        label="Guidelines"
+        label="Rules and Guidelines"
         component={Link}
-        to="/guidelines"
+        to="/rules-and-guidelines"
         disableRipple
         sx={{ textTransform: "none", fontWeight: "bold" }}
       />
