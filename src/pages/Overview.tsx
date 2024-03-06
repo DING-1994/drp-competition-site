@@ -15,7 +15,7 @@ import "katex/dist/katex.min.css";
 export default function Overview({ index, value }: PageProps) {
   return (
     <Content index={index} value={value}>
-      <HeadingWithLink id="advisory">Welcome to the 1st DRP Challenge@AAMAS-2024.</HeadingWithLink>
+      <HeadingWithLink id="advisory">Welcome to the 1st DRP Challenge@AAMAS-2024!</HeadingWithLink>
       <Paragraph>
         Drone Routing Problems (DRP) Challenge is based on multiple drone delivery scenarios, where the objective is to 
         identify a set of collision-free, optimal paths for multiple drones on real-world maps.
