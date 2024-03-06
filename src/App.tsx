@@ -39,7 +39,7 @@ export default function App() {
       case "/overview":
         newValue = TAB_VALUES.Overview;
         break;
-      case "/rules-and-guidelines":
+      case "/guidelines":
         newValue = TAB_VALUES.Rules;
         break;
       case "/leaderboard":
@@ -118,7 +118,7 @@ export default function App() {
               }
             />
             <Route
-              path="/rules-and-guidelines"
+              path="/guidelines"
               element={
                 <RulesAndGuidelines index={TAB_VALUES.Rules} value={tabValue} />
               }
