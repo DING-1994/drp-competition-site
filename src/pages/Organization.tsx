@@ -7,11 +7,7 @@ import Ul from "../components/paragraphComponents/UnorderedList";
 export default function Organization({ index, value }: PageProps) {
   return (
     <Content index={index} value={value}>
-      <HeadingWithLink id="organizers">Organizers</HeadingWithLink>
-      <Paragraph>
-        The organizing team consists of experts and students from various
-        institutions.
-      </Paragraph>
+      <HeadingWithLink id="organizers">Board Members</HeadingWithLink>
       <Ul>
         <li>
           Prof. Shiyao Ding (Kyoto University,{" "}
@@ -32,9 +28,10 @@ export default function Organization({ index, value }: PageProps) {
           </a>
           )
         </li>
-        <li>Ryo Magoshi (Kyoto University)</li>
-        <li>Lee Kunwoo (Kyoto University)</li>
-        <li>Atsushi Yanagisawa (Kyoto University)</li>
+        <HeadingWithLink id="organizers">Executive Committee</HeadingWithLink>
+        <li>Mr. Ryo Magoshi (Kyoto University)</li>
+        <li>Mr. Lee Kunwoo (Kyoto University)</li>
+        <li>Mr. Atsushi Yanagisawa (Kyoto University)</li>
       </Ul>
       <HeadingWithLink id="advisory">Advisory Board</HeadingWithLink>
       <Ul>
