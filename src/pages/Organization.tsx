@@ -1,5 +1,5 @@
 import HeadingWithLink from "../components/paragraphComponents/HeadingWithLink";
-import { Paragraph } from "../components/paragraphComponents/Paragraph";
+// import { Paragraph } from "../components/paragraphComponents/Paragraph";
 import { PageProps } from "./props/PageProps";
 import Content from "../components/body/Content";
 import Ul from "../components/paragraphComponents/UnorderedList";
