@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import HeadingWithLink from "../components/paragraphComponents/HeadingWithLink";
 import { Paragraph } from "../components/paragraphComponents/Paragraph";
 import { PageProps } from "./props/PageProps";
-import Ul from "../components/paragraphComponents/UnorderedList";
+// import Ul from "../components/paragraphComponents/UnorderedList";
 import Content from "../components/body/Content";
 // import overviewImgUrl from "../assets/images/overview.png";
 // import environmentExampleUrl from "../assets/images/environment_example.png";
