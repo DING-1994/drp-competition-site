@@ -28,7 +28,9 @@ export default function Organization({ index, value }: PageProps) {
           </a>
           )
         </li>
-        <HeadingWithLink id="organizers">Executive Committee</HeadingWithLink>
+      </Ul>
+      <Ul>
+      <HeadingWithLink id="organizers">Executive Committee</HeadingWithLink>
         <li>Mr. Ryo Magoshi (Kyoto University)</li>
         <li>Mr. Lee Kunwoo (Kyoto University)</li>
         <li>Mr. Atsushi Yanagisawa (Kyoto University)</li>
