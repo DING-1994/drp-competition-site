@@ -15,12 +15,12 @@ import "katex/dist/katex.min.css";
 export default function Overview({ index, value }: PageProps) {
   return (
     <Content index={index} value={value}>
+      <HeadingWithLink id="advisory">Welcome to the 1st DRP Challenge@AAMAS-2024.</HeadingWithLink>
       <Paragraph>
-        Welcome to the 1st Drone Routing Problems (DRP) Challenge @ AAMAS-2024.
-        DRP Challenge is a multiple drone delivery scenario, where the objective is to 
-        identify a set of collision-free optimal paths for multiple drones on real-world maps.
-        Using a virtual platform that mimics real-world delivery scenarios, participants are
-        expected to develop algorithms that facilitate safe, efficient, and cost-effective drone delivery of goods.
+        Drone Routing Problems (DRP) Challenge is based on multiple drone delivery scenarios, where the objective is to 
+        identify a set of collision-free, optimal paths for multiple drones on real-world maps.
+         Using a virtual platform that mimics real-world delivery scenarios, 
+         participants are expected to develop algorithms that facilitate safe, efficient, and cost-effective drone delivery of goods.
         <Grid container alignItems="center" justifyContent="center" padding={5}>
         <img
           src={aerialDeliveryRobot}
@@ -32,11 +32,11 @@ export default function Overview({ index, value }: PageProps) {
 
       <HeadingWithLink id="important-date">Important Date</HeadingWithLink>
       <Ul>
-        <li>Open homepage and start registration:2024.01.29 10:30 UTC+9</li>
-        <li>Submission period:2024.01.29 - 2024.04.15</li>
-        <li>Submission deadline:2024.04.15 10:30 UTC+9</li>
-        <li>Finalist Announcement:2024.04.20 10:30 UTC+9</li>
-        <li>Winner Announcement:2024.04.25 10:30 UTC+9</li>
+        <li>Open homepage and start registration:2024.02.07 </li>
+        <li>Contribution period:2024.02.07 - 2024.04.01</li>
+        <li>Submission deadline of contributions:2024.04.01 23:59 AoE</li>
+        <li>Finalist Announcement:2024.04.10 </li>
+        <li>Agenda Publishment:2024.04.17 </li>
       </Ul>
 
     </Content>
