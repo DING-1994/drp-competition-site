@@ -10,9 +10,9 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
     <Content index={index} value={value}>
       <HeadingWithLink id="important-date">Important Date</HeadingWithLink>
       <Ul>
-        <li>Open homepage and start registration:2024.02.07 </li>
-        <li>Contribution period:2024.02.07 - 2024.04.01</li>
-        <li>Submission deadline of contributions:2024.04.01 23:59 AoE</li>
+        <li>Open Homepage and Start Registration:2024.02.07 </li>
+        <li>Contribution Period:2024.02.07 - 2024.04.01</li>
+        <li>Submission Deadline of Contributions:2024.04.01 23:59 AoE</li>
         <li>Finalist Announcement:2024.04.10 </li>
         <li>Agenda Publishment:2024.04.17 </li>
       </Ul>
@@ -27,7 +27,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
       </Paragraph>
       <HeadingWithLink id="submission">Submission</HeadingWithLink>
       <Paragraph>
-        After completing registration, participants can begin to develop their contributions　by using the <a href="https://github.com/DrpChallenge/main">GitHub repository</a>. 
+        After completing registration, participants can begin to develop their contributions by using the <a href="https://github.com/DrpChallenge/main">GitHub repository</a>. 
         You are required to submit a zip file containing the following components:
       </Paragraph>
       <Ul>
@@ -73,7 +73,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
       </Paragraph>
             <HeadingWithLink id="q-and-a">Q&A</HeadingWithLink>
       <Paragraph>
-       Please be free to consult with drpcommon2023@gmail.com, if you have any question.
+       Please be free to consult with <a href="drpcommon2023@gmail.com">drpcommon2023[at]gmail.com</a>, if you have any question.
       </Paragraph>
     </Content>
   );
