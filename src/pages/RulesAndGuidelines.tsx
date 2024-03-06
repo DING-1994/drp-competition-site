@@ -29,49 +29,39 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         <li>
           Academic Report: A brief description of your method, to be provided in English. 
         </li>
+      <Paragraph>
       You may submit your contributions multiple times; however, only the final submission will be considered for evaluation.
+      </Paragraph>
       </Ul>
 
-      <HeadingWithLink id="finalist">Finalist</HeadingWithLink>
+      <HeadingWithLink id="prizes">Prizes</HeadingWithLink>
       <Paragraph>
-        Each submission undergoes scoring and ranking based on the evaluation
-        metrics specified on the homepage. The top three teams are then selected
-        as finalists. During the finalist determination process, we thoroughly
-        examine each submission to ensure it meets the following criteria:
+        Each submission will be scored and ranked based on specific evaluation metrics. 
+        Certificates will be awarded to all participants whose programs run successfully. 
+        Additionally, the top 3 teams will be recognized with 1st, 2nd, and 3rd prizes, respectively. 
+        We conduct a thorough examination of each submission to ensure it adheres to the following criteria:
       </Paragraph>
       <Ul>
         <li>
-          Code fairness: Confirming there is no plagiarism from other teams in
-          the code.
+          Code Fairness: there must be no plagiarism from other teams in your code.
         </li>
         <li>
-          Model reproducibility: Verifying that the score is independent of the
-          state of the environment.
+          Model Reproducibility: The submission must be reproducible using the original DRP environment codes provided by us.
         </li>
       </Ul>
       <Paragraph>
-        Sharing information among teams is strictly restricted. It is forbidden
-        to use the code of other teams and vice versa.
+       Failure to meet these criteria disqualifies a participant from being selected as a finalist, 
+        regardless of their score. The announcement of finalists will be made on the competition's homepage, 
+        where three teams will be selected as finalists based on their scores.
       </Paragraph>
-      <Paragraph>
-        If a team fails to meet these criteria, the participant cannot be
-        selected as a finalist, regardless of their score. The announcement of
-        finalists for this competition is made on the homepage. We will select
-        three teams as finalists based on their score.
-      </Paragraph>
-      <HeadingWithLink id="prizes">Prizes</HeadingWithLink>
-      <Paragraph>
-        We will issue certificates to all participants whose programs run
-        successfully. These include certificates for the 1st, 2nd, and 3rd prize
-        winners.
-      </Paragraph>
-      <HeadingWithLink id="others">Others</HeadingWithLink>
+      
+      <HeadingWithLink id="others">Rules</HeadingWithLink>
       <Paragraph>
         Participants are permitted to add functions within the environment;
         however, they are not allowed to alter the fundamental behavior of the
         agents and the environment. For instance, modifying the definition of
         collisions or extending the range of agent movement beyond nodes and
-        edges is strictly prohibited.
+        edges is prohibited.
       </Paragraph>
             <HeadingWithLink id="q-and-a">Q&A</HeadingWithLink>
       <Paragraph>
