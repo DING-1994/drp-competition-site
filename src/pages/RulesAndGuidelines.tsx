@@ -73,7 +73,7 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
       </Paragraph>
             <HeadingWithLink id="q-and-a">Q&A</HeadingWithLink>
       <Paragraph>
-       Please be free to consult with <a href="drpcommon2023@gmail.com">drpcommon2023[at]gmail.com</a>, if you have any question.
+       Please be free to consult with <a href="drpchallenge@googlegroups.com">drpchallenge[at]googlegroups.com</a>, if you have any question.
       </Paragraph>
     </Content>
   );
