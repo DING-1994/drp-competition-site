@@ -16,6 +16,9 @@ import RulesAndGuidelines from "./pages/RulesAndGuidelines";
 import Submissions from "./pages/Submissions";
 import { appTheme } from "./util/Theme";
 
+import firebase from 'firebase/app';
+import 'firebase/analytics';
+
 export const TAB_VALUES = {
   Overview: 0,
   Rules: 1,
@@ -73,6 +76,26 @@ export default function App() {
   // };
 
   const theme = createTheme(appTheme(darkMode));
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDoYvsrpg050csMlpa6iK2hQ5J-1JE9u1Y",
+    authDomain: "drp-competition.firebaseapp.com",
+    projectId: "drp-competition",
+    storageBucket: "drp-competition.appspot.com",
+    messagingSenderId: "83036005310",
+    appId: "1:83036005310:web:27dd28279d9352c0704fef",
+    measurementId: "G-FJ5GZVJ0KM"
+  };
+
+  if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+  } else {
+    firebase.app(); // if already initialized, use that one
+  }
+
+  firebase.analytics();
 
   return (
     <AuthProvider>
