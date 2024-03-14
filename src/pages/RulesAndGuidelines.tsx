@@ -25,25 +25,6 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         as part of a team. When registering as a team, please ensure all members use the same team name. 
         There is no limit to the number of members per team.
       </Paragraph>
-      <HeadingWithLink id="cost">Cost</HeadingWithLink>
-      <Paragraph>
-      We evaluate based on the following equation:
-      <BlockMath math="Cost = \frac{1}{10} \sum_{i=1}^{10} \sum_{j \in drones} cost_{ij}" />
-      Where:
-      <InlineMath>i</InlineMath> is the number of episode.
-      A set <InlineMath>drones</InlineMath> is all drones at the problem.
-      <BlockMath math="\begin{align*}
-      cost_{ij} = \begin{cases}
-      cost_{ij} & \text{if no collision happened until step } cost_{ij} \text{ at episode } i \text{ and } cost_{ij} < 100 \\
-      100 & \text{if collision happened and doesn't reach or } cost_{ij} \geq 100 \\
-      \end{cases}
-      \end{align*}
-      " />
-      <BlockMath math="Final~Cost = \sum_{p \in problems}cost_p " />
-      where:
-      <InlineMath>cost_p</InlineMath> is the cost of the problem <InlineMath>p</InlineMath>
-      The final cost is the sum of the costs of the 30 problems. The objective is to <strong>minimize</strong> this final cost.
-      </Paragraph>
 
       <HeadingWithLink id="submission">Submission</HeadingWithLink>
       <Paragraph>
@@ -91,6 +72,26 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         collisions or extending the range of agent movement beyond nodes and
         edges is prohibited.
       </Paragraph>
+            <HeadingWithLink id="cost">Cost</HeadingWithLink>
+      <Paragraph>
+      We evaluate based on the following equation:
+      <BlockMath math="Cost = \frac{1}{10} \sum_{i=1}^{10} \sum_{j \in drones} cost_{ij}" />
+      Where:
+      <InlineMath>i</InlineMath> is the number of episode.
+      A set <InlineMath>drones</InlineMath> is all drones at the problem.
+      <BlockMath math="\begin{align*}
+      cost_{ij} = \begin{cases}
+      cost_{ij} & \text{if no collision happened until step } cost_{ij} \text{ at episode } i \text{ and } cost_{ij} < 100 \\
+      100 & \text{if collision happened and doesn't reach or } cost_{ij} \geq 100 \\
+      \end{cases}
+      \end{align*}
+      " />
+      <BlockMath math="Final~Cost = \sum_{p \in problems}cost_p " />
+      where:
+      <InlineMath>cost_p</InlineMath> is the cost of the problem <InlineMath>p</InlineMath>
+      The final cost is the sum of the costs of the 30 problems. The objective is to <strong>minimize</strong> this final cost.
+      </Paragraph>
+
             <HeadingWithLink id="q-and-a">Q&A</HeadingWithLink>
       <Paragraph>
        Please be free to consult with <a href="drpchallenge@googlegroups.com">drpchallenge[at]googlegroups.com</a>, if you have any question.
