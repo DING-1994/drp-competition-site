@@ -25,7 +25,7 @@ export default function Overview({ index, value }: PageProps) {
       <HeadingWithLink id="advisory">News</HeadingWithLink>
       <Paragraph>
         <p>2024.03.10 A brief illustration <a href="https://www.youtube.com/watch?v=GvozDxtEDTs">video</a> has been uploaded.</p>
-        <p>2024.03.14 A reinforcement learning <a href="https://github.com/DrpChallenge/main/tree/main/example">example code</a> has been provided.</p>
+        <p>2024.03.14 A reinforcement learning based <a href="https://github.com/DrpChallenge/main/tree/main/example">example code</a> has been provided.</p>
         <Grid container alignItems="center" justifyContent="center" padding={5}>
         <img
           src={aerialDeliveryRobot}
