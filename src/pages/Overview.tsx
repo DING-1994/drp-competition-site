@@ -29,7 +29,12 @@ export default function Overview({ index, value }: PageProps) {
         />
       </Grid>
       </Paragraph>
-
+      
+      <HeadingWithLink id="advisory">News</HeadingWithLink>
+      <Paragraph>
+        2024.03.10 A brief illustration video has been uploaded.
+        2024.03.14 A reinforcement learning example code has been provided.
+      </Paragraph>
     </Content>
   );
 }
