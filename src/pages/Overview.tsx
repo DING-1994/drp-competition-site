@@ -21,6 +21,11 @@ export default function Overview({ index, value }: PageProps) {
         identify a set of collision-free, optimal paths for multiple drones on real-world maps.
          Using a virtual platform that mimics real-world delivery scenarios, 
          participants are expected to develop algorithms that facilitate safe, efficient, and cost-effective drone delivery of goods.
+      </Paragraph>
+      <HeadingWithLink id="advisory">News</HeadingWithLink>
+      <Paragraph>
+        <p></>2024.03.10 A brief illustration video has been uploaded.</p>
+        <p>2024.03.14 A reinforcement learning example code has been provided.</p>
         <Grid container alignItems="center" justifyContent="center" padding={5}>
         <img
           src={aerialDeliveryRobot}
@@ -28,12 +33,6 @@ export default function Overview({ index, value }: PageProps) {
           alt="Overview"
         />
       </Grid>
-      </Paragraph>
-      
-      <HeadingWithLink id="advisory">News</HeadingWithLink>
-      <Paragraph>
-        2024.03.10 A brief illustration video has been uploaded.
-        2024.03.14 A reinforcement learning example code has been provided.
       </Paragraph>
     </Content>
   );
