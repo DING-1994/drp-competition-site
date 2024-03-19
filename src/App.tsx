@@ -80,6 +80,7 @@ export default function App() {
         <CssBaseline />
         <HashRouter>
           <Header
+            tabValue={tabValue}
             setTabValue={setTabValue}
             signInFormInfoState={signInFormInfoState}
             signUpFormInfoState={signUpFormInfoState}

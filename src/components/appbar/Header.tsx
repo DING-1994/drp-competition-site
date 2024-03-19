@@ -19,6 +19,7 @@ import { FormInfo } from "../../hooks/useFormInfo";
 import { logout } from "../../lib/firebase/auth";
 
 interface HeaderProps {
+  tabValue: TAB_VALUES_TYPE;
   setTabValue: React.Dispatch<React.SetStateAction<TAB_VALUES_TYPE>>;
   signUpFormInfoState: FormInfo;
   signInFormInfoState: FormInfo;
@@ -26,6 +27,7 @@ interface HeaderProps {
 }
 
 export default function Header({
+  tabValue,
   setTabValue,
   signUpFormInfoState,
   signInFormInfoState,
@@ -34,22 +36,24 @@ export default function Header({
   return (
     <>
       {/* drp Challengeを左上に表示 */}
-      <Typography variant="h4" component="div" 
-          sx={{ 
-            color: 'primary', 
-            backgroundColor: "white",
-            padding: 1,
-            marginLeft: {
-              xs: "4vw",
-              sm: "4vw",
-              md: "8vw",
-            },
-            marginRight: {
-              xs: "4vw",
-              sm: "4vw",
-              md: "8vw",
-            },
-          }}
+      <Typography
+        variant="h4"
+        component="div"
+        sx={{
+          color: "primary",
+          backgroundColor: "white",
+          padding: 1,
+          marginLeft: {
+            xs: "4vw",
+            sm: "4vw",
+            md: "8vw",
+          },
+          marginRight: {
+            xs: "4vw",
+            sm: "4vw",
+            md: "8vw",
+          },
+        }}
       >
         DRP Challenge
       </Typography>
@@ -69,7 +73,7 @@ export default function Header({
             },
           }}
         >
-          <HeaderTabs setTabValue={setTabValue} />
+          <HeaderTabs tabValue={tabValue} setTabValue={setTabValue} />
           <Box sx={{ flexGrow: 1 }} />
           <Button
             variant="contained"

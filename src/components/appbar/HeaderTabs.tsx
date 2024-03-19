@@ -13,10 +13,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Box } from "@mui/system";
 
 interface HeaderTabsProps {
+  tabValue: TAB_VALUES_TYPE;
   setTabValue: React.Dispatch<React.SetStateAction<TAB_VALUES_TYPE>>;
 }
 
-export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
+export default function HeaderTabs({ tabValue, setTabValue }: HeaderTabsProps) {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -26,27 +27,27 @@ export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
     setMobileOpen((prevState) => !prevState);
   };
 
-  const currentTabValue = (() => {
-    const path = location.pathname.replace("#", "");
-    switch (path) {
-      case "/overview":
-        return TAB_VALUES.Overview;
-      case "/guidelines":
-        return TAB_VALUES.Rules;
-      case "/leaderboard":
-        return TAB_VALUES.Leaderboard;
-      case "/submissions":
-        return TAB_VALUES.Submissions;
-      case "/organization":
-        return TAB_VALUES.Organization;
-      default:
-        return TAB_VALUES.Overview;
-    }
-  })();
+  // const tabValue = (() => {
+  //   const path = location.pathname.replace("#", "");
+  //   switch (path) {
+  //     case "/overview":
+  //       return TAB_VALUES.Overview;
+  //     case "/guidelines":
+  //       return TAB_VALUES.Rules;
+  //     case "/leaderboard":
+  //       return TAB_VALUES.Leaderboard;
+  //     case "/submissions":
+  //       return TAB_VALUES.Submissions;
+  //     case "/organization":
+  //       return TAB_VALUES.Organization;
+  //     default:
+  //       return TAB_VALUES.Overview;
+  //   }
+  // })();
 
   React.useEffect(() => {
     const hash = location.hash.replace("#", "");
-    setTabValue(currentTabValue);
+    setTabValue(tabValue);
     // DOM の構築が終わるのを待ってからスクロールする
     setTimeout(() => {
       const element = document.getElementById(hash);
@@ -55,7 +56,7 @@ export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
       }
       navigate(`#${hash}`);
     }, 0);
-    console.log("currentTabValue: ", currentTabValue);
+    console.log("tabValue: ", tabValue);
   }, []);
 
   const handleTabChange = (
@@ -74,7 +75,7 @@ export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
       <Tabs
         onChange={handleTabChange}
         orientation="vertical"
-        value={currentTabValue}
+        value={tabValue}
         sx={{
           alignSelf: "stretch",
           paddingTop: "5vh",
@@ -133,7 +134,7 @@ export default function HeaderTabs({ setTabValue }: HeaderTabsProps) {
         <MenuIcon />
       </IconButton>
       <Tabs
-        value={currentTabValue}
+        value={tabValue}
         onChange={handleTabChange}
         sx={{
           alignSelf: "stretch",
