@@ -1,4 +1,4 @@
-import { TAB_VALUES, TAB_VALUES_TYPE } from "../../App";
+import { TAB_VALUES_TYPE } from "../../App";
 import {
   Divider,
   Drawer,
