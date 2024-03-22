@@ -15,6 +15,7 @@ import Overview from "./pages/Overview";
 import RulesAndGuidelines from "./pages/RulesAndGuidelines";
 import Submissions from "./pages/Submissions";
 import { appTheme } from "./util/Theme";
+import FAQ from "./pages/QandA";
 
 export const TAB_VALUES = {
   Overview: 0,
@@ -22,6 +23,7 @@ export const TAB_VALUES = {
   Organization: 2,
   Submissions: 3,
   Leaderboard: 4,
+  FAQ:5,
 } as const;
 
 export type TAB_VALUES_TYPE = (typeof TAB_VALUES)[keyof typeof TAB_VALUES];
@@ -50,6 +52,9 @@ export default function App() {
         break;
       case "/organization":
         newValue = TAB_VALUES.Organization;
+        break;
+      case "/FAQ":
+        newValue = TAB_VALUES.FAQ;
         break;
       default:
         newValue = TAB_VALUES.Overview;
@@ -145,6 +150,11 @@ export default function App() {
                 />
               }
             />
+            <Route
+            path="/QandA"
+            element={
+              <FAQ index={TAB_VALUES.FAQ} value={tabValue} />
+            }/>
           </Routes>
         </HashRouter>
       </ThemeProvider>

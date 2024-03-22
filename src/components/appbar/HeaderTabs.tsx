@@ -117,6 +117,13 @@ export default function HeaderTabs({ tabValue, setTabValue }: HeaderTabsProps) {
           disableRipple
           sx={{ textTransform: "none", fontWeight: "bold" }}
         />
+        <Tab
+          label="QandA"
+          component={Link}
+          to="QandA/"
+          disableRipple
+          sx={{ textTransform: "none", fontWeight: "bold" }}
+        />
       </Tabs>
     </Box>
   );
@@ -177,6 +184,13 @@ export default function HeaderTabs({ tabValue, setTabValue }: HeaderTabsProps) {
           label="Leaderboard"
           component={Link}
           to="/leaderboard"
+          disableRipple
+          sx={{ textTransform: "none", fontWeight: "bold" }}
+        />
+        <Tab
+          label="Q&A"
+          component={Link}
+          to="/QandA"
           disableRipple
           sx={{ textTransform: "none", fontWeight: "bold" }}
         />

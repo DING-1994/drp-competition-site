@@ -23,6 +23,9 @@ export default function Submissions({ index, value }: PageProps) {
               {currentUser.displayName} ({currentUser.email})
             </strong>
           </Paragraph>
+          <Paragraph>
+          If you participate as a team, only one representative needs to submit.
+          </Paragraph>
           <FileUploadForm formInfoState={formInfoState} />
         </>
       ) : (
