@@ -45,11 +45,7 @@ export default function Overview({ index, value }: PageProps) {
           has been provided.
         </p>
         <p>
-          2024.03.22{" "}
-          <a href="https://drp-challenge.com/#/guidelines#important-date">
-            Some date
-          </a>{" "}
-          has been changed and{" "}
+          2024.03.22 Some date has been changed and{" "}
           <a href="https://github.com/DrpChallenge/main/blob/main/assets/markdown/FAQ.md">
             Frequently Asked Questions
           </a>{" "}
