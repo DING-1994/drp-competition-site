@@ -46,7 +46,7 @@ export default function Overview({ index, value }: PageProps) {
         </p>
         <p>
           2024.03.22{" "}
-          <a href="https://drp-challenge.com/#/guidelines">
+          <a href="https://drp-challenge.com/#/guidelines#important-date">
             Some date
           </a>{" "}
           has been changed and{" "}
