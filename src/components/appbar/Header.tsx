@@ -45,7 +45,7 @@ export default function Header({
           height: "250px",
           backgroundColor: "rgb(100,100,100)",
           backgroundImage:
-            "linear-gradient(to top left, rgba(255,255,255,0.4), rgba(255,255,255,0))",
+            "linear-gradient(to top left, rgba(255,255,255,0.75), rgba(255,255,255,0))",
           position: "relative",
           zIndex: -2,
         }}
@@ -54,7 +54,7 @@ export default function Header({
           <Typography
             variant="h3"
             sx={{
-              color: "rgb(190,190,190)",
+              color: "rgb(220,220,220)",
               textAlign: "left",
               paddingTop: "2rem",
               paddingLeft: { xs: "4vw", sm: "4vw", md: "8vw" },
