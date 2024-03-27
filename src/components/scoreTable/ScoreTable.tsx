@@ -39,6 +39,11 @@ export default function ScoreTable() {
         return recordData;
       });
       Promise.all(scorePromises).then((scores) => {
+        scores.sort((a, b) => {
+          const scoreA = JSON.parse(a.record);
+          const scoreB = JSON.parse(b.record);
+          return scoreA["final cost"] - scoreB["final cost"];
+        });
         setScores(scores);
       });
     });
