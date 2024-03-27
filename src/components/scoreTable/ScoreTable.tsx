@@ -60,8 +60,8 @@ export default function ScoreTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {scores.map((score_raw) => {
-            const score = JSON.parse(score_raw.record);
+          {scores.map((rawScore) => {
+            const score = JSON.parse(rawScore.record);
             return (
               <TableRow key={score.Author}>
                 <TableCell component="th" scope="row">
