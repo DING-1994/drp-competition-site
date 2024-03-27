@@ -1,14 +1,15 @@
-import { useEffect, useState } from "react";
-import samplescore from "../../scores/sample.json";
 import {
+  Paper,
   Table,
   TableBody,
   TableCell,
   TableContainer,
   TableHead,
   TableRow,
-  Paper,
 } from "@mui/material";
+import { collection, getDocs } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { db } from "../../lib/firebase/firebase";
 
 interface Score {
   instance_id: number;
@@ -21,10 +22,8 @@ interface Score {
 }
 
 interface ScoreTableData {
-  Author: string;
-  "Scored time": string;
-  Score: Score[];
-  "final cost": number;
+  id: string;
+  record: string;
 }
 
 export default function ScoreTable() {
@@ -32,11 +31,19 @@ export default function ScoreTable() {
   const instanceCount = 30;
 
   useEffect(() => {
-    // JSONファイルを全て読み込み、オブジェクトにする
-    setScores([samplescore]);
+    const recordCollectionRef = collection(db, "records");
+    getDocs(recordCollectionRef).then((querySnapshot) => {
+      const scorePromises = querySnapshot.docs.map((recordDoc) => {
+        const recordData = recordDoc.data() as ScoreTableData;
+        recordData.id = recordDoc.id;
+        return recordData;
+      });
+      Promise.all(scorePromises).then((scores) => {
+        setScores(scores);
+      });
+    });
   }, []);
 
-  // スコアを表示するためのコード
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -53,20 +60,23 @@ export default function ScoreTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {scores.map((score) => (
-            <TableRow key={score.Author}>
-              <TableCell component="th" scope="row">
-                {score.Author}
-              </TableCell>
-              <TableCell align="right">{score["Scored time"]}</TableCell>
-              <TableCell align="right">{score["final cost"]}</TableCell>
-              {score.Score.map((scoreDetail, index) => (
-                <TableCell key={index} align="right">
-                  {scoreDetail.subtotal_cost}
+          {scores.map((score_raw) => {
+            const score = JSON.parse(score_raw.record);
+            return (
+              <TableRow key={score.Author}>
+                <TableCell component="th" scope="row">
+                  {score.Author}
                 </TableCell>
-              ))}
-            </TableRow>
-          ))}
+                <TableCell align="right">{score["Scored time"]}</TableCell>
+                <TableCell align="right">{score["final cost"]}</TableCell>
+                {score.Score.map((scoreDetail: Score, index: number) => (
+                  <TableCell key={index} align="right">
+                    {scoreDetail.subtotal_cost}
+                  </TableCell>
+                ))}
+              </TableRow>
+            );
+          })}
         </TableBody>
       </Table>
     </TableContainer>
