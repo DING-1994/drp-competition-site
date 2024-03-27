@@ -18,7 +18,7 @@ import { UserInfo } from "../../hooks/useUserInfo";
 import { FormInfo } from "../../hooks/useFormInfo";
 import { logout } from "../../lib/firebase/auth";
 
-import environmentExampleImageUrl from "../../assets/images/environment_example.png";
+// import environmentExampleImageUrl from "../../assets/images/environment_example.png";
 
 interface HeaderProps {
   tabValue: TAB_VALUES_TYPE;
