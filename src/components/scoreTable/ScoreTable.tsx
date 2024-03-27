@@ -12,7 +12,6 @@ import {
 import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../../lib/firebase/firebase";
-import { set } from "firebase/database";
 
 interface Score {
   instance_id: number;
