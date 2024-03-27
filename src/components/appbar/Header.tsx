@@ -18,6 +18,8 @@ import { UserInfo } from "../../hooks/useUserInfo";
 import { FormInfo } from "../../hooks/useFormInfo";
 import { logout } from "../../lib/firebase/auth";
 
+import environmentExampleImageUrl from "../../assets/images/environment_example.png";
+
 interface HeaderProps {
   tabValue: TAB_VALUES_TYPE;
   setTabValue: React.Dispatch<React.SetStateAction<TAB_VALUES_TYPE>>;
@@ -35,28 +37,59 @@ export default function Header({
 }: HeaderProps) {
   return (
     <>
-      {/* drp Challengeを左上に表示 */}
-      <Typography
-        variant="h4"
-        component="div"
-        sx={{
-          color: "primary",
-          backgroundColor: "white",
-          padding: 1,
-          marginLeft: {
-            xs: "4vw",
-            sm: "4vw",
-            md: "8vw",
-          },
-          marginRight: {
-            xs: "4vw",
-            sm: "4vw",
-            md: "8vw",
-          },
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          width: "100%",
+          height: "250px",
+          backgroundColor: "rgb(100,100,100)",
+          backgroundImage:
+            "linear-gradient(to top left, rgba(255,255,255,0.4), rgba(255,255,255,0))",
+          position: "relative",
+          zIndex: -2,
         }}
       >
-        DRP Challenge
-      </Typography>
+        <div style={{ width: "max-content", position: "relative" }}>
+          <Typography
+            variant="h3"
+            sx={{
+              color: "rgb(190,190,190)",
+              textAlign: "left",
+              paddingTop: "2rem",
+              paddingLeft: { xs: "4vw", sm: "4vw", md: "8vw" },
+              fontSize: { xs: "1rem", sm: "1.5rem", md: "2.3rem" },
+            }}
+          >
+            Drone Routing Problems Challenge
+          </Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              color: "rgb(190,190,190)",
+              textAlign: "right",
+              paddingTop: "1rem",
+              fontSize: "1.2rem",
+            }}
+          >
+            @ AAMAS-2024
+          </Typography>
+        </div>
+        {/* <div style={{ width: "max-content" }}>
+          <img
+            src={environmentExampleImageUrl}
+            alt="environment"
+            style={{
+              height: "150%",
+              position: "relative",
+              top: "-55%",
+              left: "-10%",
+              zIndex: -1,
+              opacity: 0.2,
+            }}
+          />
+        </div> */}
+      </div>
       <AppBar position="sticky" sx={{ backgroundColor: "white", padding: 0 }}>
         <Toolbar
           sx={{
