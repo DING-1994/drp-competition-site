@@ -16,7 +16,6 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         <li>Finalist Announcement:2024.04.10 </li>
         <li>Agenda Publishment:2024.04.17 </li> */}
         <li>Open Homepage and Start Registration:2024.02.07</li>
-        <li>Register Period:2024.02.07 - 2024.03.29</li>
         <li>Entry Deadline:2024.04.15</li> 
         <li>Submission Deadline of Contributions:2024.04.25 23:59 AoE</li>
         <li>Finalist Announcement:2024.05.03 </li>
