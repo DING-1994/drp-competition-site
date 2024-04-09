@@ -18,7 +18,7 @@ import { UserInfo } from "../../hooks/useUserInfo";
 import { FormInfo } from "../../hooks/useFormInfo";
 import { logout } from "../../lib/firebase/auth";
 
-// import environmentExampleImageUrl from "../../assets/images/environment_example.png";
+import environmentExampleImageUrl from "../../assets/images/environment_example.png";
 
 interface HeaderProps {
   tabValue: TAB_VALUES_TYPE;
@@ -48,6 +48,7 @@ export default function Header({
             "linear-gradient(to top left, rgba(255,255,255,0.75), rgba(255,255,255,0))",
           position: "relative",
           zIndex: -2,
+          overflow: "hidden",
         }}
       >
         <div style={{ width: "max-content", position: "relative" }}>
@@ -75,20 +76,20 @@ export default function Header({
             @ AAMAS-2024
           </Typography>
         </div>
-        {/* <div style={{ width: "max-content" }}>
+        <div style={{ width: "max-content" }}>
           <img
             src={environmentExampleImageUrl}
             alt="environment"
             style={{
-              height: "150%",
+              width: "150%",
               position: "relative",
               top: "-55%",
-              left: "-10%",
+              left: "-50%",
               zIndex: -1,
               opacity: 0.2,
             }}
           />
-        </div> */}
+        </div>
       </div>
       <AppBar position="sticky" sx={{ backgroundColor: "white", padding: 0 }}>
         <Toolbar
