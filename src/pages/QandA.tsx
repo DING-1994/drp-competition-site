@@ -9,7 +9,7 @@ export default function QandA({ index, value }: PageProps) {
       <HeadingWithLink id="q-and-a">Q&A</HeadingWithLink>
       <Paragraph>
         Please be free to consult with{" "}
-        <a href="drpchallenge@googlegroups.com">
+        <a href="mailto:drpchallenge@googlegroups.com">
           drpchallenge[at]googlegroups.com
         </a>
         , if you have any question.
