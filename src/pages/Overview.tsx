@@ -33,9 +33,14 @@ export default function Overview({ index, value }: PageProps) {
       <HeadingWithLink id="advisory">News</HeadingWithLink>
       <Paragraph>
         <p>
-          2024.03.10 A brief illustration{" "}
-          <a href="https://www.youtube.com/watch?v=GvozDxtEDTs">video</a> has
-          been uploaded.
+        2024.04.25 We extended the Submission Deadline to April 28th. We are waiting for your submission!! 
+        </p>
+        <p>
+          2024.03.22 Some date has been changed and{" "}
+          <a href="https://github.com/DrpChallenge/main/blob/main/assets/markdown/FAQ.md">
+            Frequently Asked Questions
+          </a>{" "}
+          page open.
         </p>
         <p>
           2024.03.14 A reinforcement learning based{" "}
@@ -45,11 +50,9 @@ export default function Overview({ index, value }: PageProps) {
           has been provided.
         </p>
         <p>
-          2024.03.22 Some date has been changed and{" "}
-          <a href="https://github.com/DrpChallenge/main/blob/main/assets/markdown/FAQ.md">
-            Frequently Asked Questions
-          </a>{" "}
-          page open.
+          2024.03.10 A brief illustration{" "}
+          <a href="https://www.youtube.com/watch?v=GvozDxtEDTs">video</a> has
+          been uploaded.
         </p>
         <Grid container alignItems="center" justifyContent="center" padding={5}>
           <img

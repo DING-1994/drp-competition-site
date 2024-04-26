@@ -17,8 +17,9 @@ export default function RulesAndGuidelines({ index, value }: PageProps) {
         <li>Agenda Publishment:2024.04.17 </li> */}
         <li>Open Homepage and Start Registration:2024.02.07</li>
         <li>Entry Deadline:2024.04.15</li> 
-        <li>Submission Deadline of Contributions:2024.04.25 23:59 AoE</li>
+        <li className="strike-through">Submission Deadline of Contributions:<a style={{ textDecoration: 'line-through' }}>2024.04.25 23:59 AoE</a> → 2024.04.28 23:59 AoE ( Extended ) </li>
         <li>Finalist Announcement:2024.05.03 </li>
+        <li >Contribution Period:2024.02.07 - 2024.04.25</li>
       </Ul>
       <Paragraph>
       Before the entry deadline , Participants may have to answer some questions ( such as whether they will participate in AAMAS ) .
