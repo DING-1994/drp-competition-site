@@ -33,7 +33,16 @@ export default function Overview({ index, value }: PageProps) {
       <HeadingWithLink id="advisory">News</HeadingWithLink>
       <Paragraph>
         <p>
-        2024.04.25 We extended the Submission Deadline to April 28th. We are waiting for your submission!! 
+          2024.05.09 DRP Challenge at AAMAS2024 was successfully held. Thank you
+          to all participants!!
+        </p>
+        <p>Here are the finalists.</p>
+        <li>1st Masahiro Kaji</li>
+        <li>2nd Katsuki Ohto </li>
+        <li>3rd Keijiro Asama </li>
+        <p>
+          2024.04.25 We extended the Submission Deadline to April 28th. We are
+          waiting for your submission!!
         </p>
         <p>
           2024.03.22 Some date has been changed and{" "}
