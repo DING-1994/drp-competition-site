@@ -7,6 +7,7 @@ import Content from "../components/body/Content";
 // import overviewImgUrl from "../assets/images/overview.png";
 // import environmentExampleUrl from "../assets/images/environment_example.png";
 import aerialDeliveryRobot from "../assets/images/aerial_delivery_robot.png";
+import AAMASmeeting from "../assets/images/AAMAS_meeting1.png";
 
 // import { BlockMath, InlineMath } from "react-katex";
 import "katex/dist/katex.min.css";
@@ -36,10 +37,11 @@ export default function Overview({ index, value }: PageProps) {
           2024.05.09 DRP Challenge at AAMAS2024 was successfully held. Thank you
           to all participants!!
         </p>
+        <img src={AAMASmeeting} style={{ width: "15vw" }} alt="Overview" />
         <p>Here are the finalists.</p>
-        <li>1st Masahiro Kaji</li>
-        <li>2nd Katsuki Ohto </li>
-        <li>3rd Keijiro Asama </li>
+        <li>1st : Masahiro Kaji</li>
+        <li>2nd : Katsuki Ohto </li>
+        <li>3rd : Keijiro Asama </li>
         <p>
           2024.04.25 We extended the Submission Deadline to April 28th. We are
           waiting for your submission!!
