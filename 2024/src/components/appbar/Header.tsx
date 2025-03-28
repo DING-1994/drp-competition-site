@@ -73,7 +73,7 @@ export default function Header({
               fontSize: "1.2rem",
             }}
           >
-            @ AAMAS-2025
+            @ AAMAS-2024
           </Typography>
         </div>
         <div style={{ width: "max-content" }}>
