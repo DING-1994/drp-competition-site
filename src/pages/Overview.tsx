@@ -7,7 +7,6 @@ import Content from "../components/body/Content";
 // import overviewImgUrl from "../assets/images/overview.png";
 // import environmentExampleUrl from "../assets/images/environment_example.png";
 import aerialDeliveryRobot from "../assets/images/aerial_delivery_robot.png";
-import AAMASmeeting from "../assets/images/AAMAS_meeting1.png";
 
 // import { BlockMath, InlineMath } from "react-katex";
 import "katex/dist/katex.min.css";
@@ -34,11 +33,13 @@ export default function Overview({ index, value }: PageProps) {
       <HeadingWithLink id="advisory">News</HeadingWithLink>
       <Paragraph>
         <p>
-          2025.03.28 The organizers present <a href="https://aamas2025.org/index.php/conference/program/demos/">our demo paper</a> as part of the 1st DRP Challenge at AAMAS 2025. 
+          2025.03.28 The organizers present{" "}
+          <a href="https://aamas2025.org/index.php/conference/program/demos/">
+            our demo paper
+          </a>{" "}
+          as part of the 1st DRP Challenge at AAMAS 2025.
         </p>
-        <p>
-          2025.03.28 Site opened!!
-        </p>
+        <p>2025.03.28 Site opened!!</p>
         <Grid container alignItems="center" justifyContent="center" padding={5}>
           <img
             src={aerialDeliveryRobot}
