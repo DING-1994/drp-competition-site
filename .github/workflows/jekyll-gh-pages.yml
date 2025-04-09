@@ -57,7 +57,7 @@ jobs:
       #     # dist リポジトリーのアップロード
       #     path: "./dist"
       - name: Upload dist folder manually
-        uses: actions/upload-artifact@v2.3.1
+        uses: actions/upload-artifact@v4
         with:
           name: github-pages
           path: ./dist
