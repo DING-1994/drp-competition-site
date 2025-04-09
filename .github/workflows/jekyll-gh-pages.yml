@@ -2,7 +2,7 @@
 name: Deploy static content to Pages
 
 on:
-  # デフォルトブランチを対象としたプッシュ時にで実行されます
+  # デフォルトブランチを対象としたプッシュ時に実行されます
   push:
     branches: ["main"]
 
@@ -21,7 +21,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # デプロイするだけなので、単一のデプロイジョブ
   deploy:
     environment:
       name: github-pages
@@ -30,13 +29,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 20.10.0
           cache: "npm"
+
       - name: Install dependencies
         run: npm install
+
       - name: Build
         run: npm run build
         env:
@@ -49,13 +51,15 @@ jobs:
           VITE_FIREBASE_MEASUREMENT_ID: ${{ secrets.VITE_FIREBASE_MEASUREMENT_ID }}
           VITE_IS_DEV: ${{ secrets.VITE_IS_DEV }}
           VITE_HOSTING_URL: ${{ secrets.VITE_HOSTING_URL }}
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
+
       - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2.0.4
-
+        uses: actions/deploy-pages@v3
