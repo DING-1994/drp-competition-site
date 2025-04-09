@@ -57,7 +57,7 @@ jobs:
       #     # dist リポジトリーのアップロード
       #     path: "./dist"
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v1.0.8
         with:
           path: "./dist"
       - name: Deploy to GitHub Pages
